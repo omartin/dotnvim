@@ -1,3 +1,9 @@
 [submodule "pack/bundle/start/vim-surround"]
 	path = pack/bundle/start/vim-surround
 	url = git@github.com:tpope/vim-surround.git
+[submodule "pack/bundle/start/iceberg"]
+	path = pack/bundle/start/iceberg
+	url = git@github.com:cocopon/iceberg.vim.git
+[submodule "pack/bundle/start/lightline"]
+	path = pack/bundle/start/lightline
+	url = git@github.com:itchyny/lightline.vim.git
