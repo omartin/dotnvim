@@ -2,8 +2,7 @@
 colorscheme iceberg
 syntax on
 
-" Editor
-set tabstop=4
+" Editor set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set autoindent
@@ -18,6 +17,7 @@ set scrolloff=3
 " backspace over everything in insert mode
 set backspace=indent,eol,start 
 set showcmd
+set noshowmode
 filetype plugin indent on
 
 " Keybinds
