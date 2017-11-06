@@ -20,6 +20,7 @@ set scrolloff=3
 set backspace=indent,eol,start 
 set showcmd
 set noshowmode
+set hidden
 filetype plugin indent on
 
 " Keybinds
