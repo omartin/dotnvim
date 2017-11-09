@@ -27,6 +27,7 @@ filetype plugin indent on
 let mapleader="\<Space>"
 map <Leader>y "*y
 map <Leader>p "*p
+map <Leader>P "*P
 map <Leader><Leader> <c-^>
 
 nnoremap <c-j> <c-w>j
