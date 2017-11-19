@@ -1,5 +1,6 @@
 " Visual style
-colorscheme iceberg
+colorscheme paramount
+set background=dark
 syntax on
 highlight! link TermCursor Cursor
 highlight! TermCursorNC guibg=red guifg=white ctermbg=1 ctermfg=15
