@@ -31,8 +31,8 @@ git submodule update --remote --merge
 
 ### Removing a plugin
 ```
-git submodule deinit vim/pack/bundle/start/nameofplugin
-git rm vim/pack/bundle/start/nameofplugin
-rm -Rf .git/modules/vim/pack/bundle/start/nameofplugin
+git submodule deinit pack/bundle/start/NAMEOFPLUGIN
+git rm pack/bundle/start/NAMEOFPLUGIN
+rm -Rf .git/modules/pack/bundle/start/NAMEOFPLUGIN
 ```
 

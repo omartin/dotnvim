@@ -7,6 +7,3 @@
 [submodule "pack/bundle/start/lightline"]
 	path = pack/bundle/start/lightline
 	url = git@github.com:itchyny/lightline.vim.git
-[submodule "pack/bundle/start/vim-color-paramount"]
-	path = pack/bundle/start/vim-color-paramount
-	url = git@github.com:omartin/vim-colors-paramount.git
