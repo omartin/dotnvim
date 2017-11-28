@@ -5,8 +5,8 @@ highlight! link TermCursor Cursor
 highlight! TermCursorNC guibg=red guifg=white ctermbg=1 ctermfg=15
 
 " Editor set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set shiftwidth=2
+set softtabstop=2
 set autoindent
 set showmatch
 set incsearch
