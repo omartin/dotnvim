@@ -1,4 +1,5 @@
 " Visual style
+"
 colorscheme gruvbox
 set background=dark
 syntax on
@@ -6,6 +7,7 @@ highlight! link TermCursor Cursor
 highlight! TermCursorNC guibg=red guifg=white ctermbg=1 ctermfg=15
 
 " Editor set tabstop=4
+"
 set shiftwidth=2
 set softtabstop=2
 set autoindent
@@ -17,14 +19,14 @@ set cursorline
 set number
 set relativenumber 
 set scrolloff=3
-" backspace over everything in insert mode
-set backspace=indent,eol,start 
+set backspace=indent,eol,start " backspace over everything in insert mode
 set showcmd
 set noshowmode
 set hidden
 filetype plugin indent on
 
 " Keybinds
+"
 let mapleader="\<Space>"
 map <Leader>y "*y
 map <Leader>p "*p
@@ -56,7 +58,10 @@ nnoremap <Down> :resize +1<CR>
 nnoremap <Tab> :bnext!<CR>
 nnoremap <S-Tab> :bprev!<CR><Paste>
 
+inoremap {<CR> {<CR>}<Esc>O
+
 " Clear the search buffer when hitting return
+"
 function! MapCR()
   nnoremap <cr> :nohlsearch<cr>
 endfunction
