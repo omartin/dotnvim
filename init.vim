@@ -5,6 +5,7 @@ set background=dark
 syntax on
 highlight! link TermCursor Cursor
 highlight! TermCursorNC guibg=red guifg=white ctermbg=1 ctermfg=15
+let g:netrw_banner = 0
 
 " Editor set tabstop=4
 "
@@ -31,6 +32,7 @@ let mapleader="\<Space>"
 map <Leader>y "*y
 map <Leader>p "*p
 map <Leader>P "*P
+map <Leader>n :e ~/notes/<CR>
 map <Leader><Leader> <c-^>
 
 nnoremap <c-j> <c-w>j
@@ -57,8 +59,10 @@ nnoremap <Down> :resize +1<CR>
 
 nnoremap <Tab> :bnext!<CR>
 nnoremap <S-Tab> :bprev!<CR><Paste>
+nnoremap <C-s> :w<CR>
 
 inoremap {<CR> {<CR>}<Esc>O
+inoremap <C-s> <Esc>:w<CR>a
 
 " Clear the search buffer when hitting return
 "
