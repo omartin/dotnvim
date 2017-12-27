@@ -10,3 +10,9 @@
 [submodule "pack/bundle/start/gruvbox"]
 	path = pack/bundle/start/gruvbox
 	url = https://github.com/morhetz/gruvbox.git
+[submodule "pack/bundle/start/vim-jsx"]
+	path = pack/bundle/start/vim-jsx
+	url = https://github.com/mxw/vim-jsx.git
+[submodule "pack/bundle/start/vim-javascript"]
+	path = pack/bundle/start/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git

@@ -6,6 +6,7 @@ syntax on
 highlight! link TermCursor Cursor
 highlight! TermCursorNC guibg=red guifg=white ctermbg=1 ctermfg=15
 let g:netrw_banner = 0
+let g:jsx_ext_required = 0
 
 " Editor set tabstop=4
 "
