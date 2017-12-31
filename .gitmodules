@@ -16,3 +16,6 @@
 [submodule "pack/bundle/start/vim-javascript"]
 	path = pack/bundle/start/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
+[submodule "pack/bundle/start/fzf"]
+	path = pack/bundle/start/fzf
+	url = https://github.com/junegunn/fzf.git
