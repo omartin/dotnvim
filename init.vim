@@ -5,8 +5,6 @@ set background=dark
 syntax on
 highlight! link TermCursor Cursor
 highlight! TermCursorNC guibg=red guifg=white ctermbg=1 ctermfg=15
-let g:netrw_banner = 0
-let g:jsx_ext_required = 0
 
 " Editor set tabstop=4
 "
@@ -75,3 +73,10 @@ call MapCR()
 if has('nvim') && executable('nvr')
   let $VISUAL="nvr -cc split --remote-wait + 'set bufhidden=wipe'"
 endif
+
+" Special
+"
+let g:netrw_banner = 0
+let g:netrw_list_hide= '^\.git$,^\.DS_Store$'
+let g:jsx_ext_required = 0
+
