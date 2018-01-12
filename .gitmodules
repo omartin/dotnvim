@@ -25,3 +25,6 @@
 [submodule "pack/bundle/start/deoplete"]
 	path = pack/bundle/start/deoplete
 	url = https://github.com/Shougo/deoplete.nvim.git
+[submodule "pack/bundle/start/nvim-typescript"]
+	path = pack/bundle/start/nvim-typescript
+	url = https://github.com/mhartington/nvim-typescript.git

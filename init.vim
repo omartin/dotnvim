@@ -82,7 +82,6 @@ let g:netrw_list_hide= '^\.git$,^\.DS_Store$'
 
 let g:jsx_ext_required = 0
 
-let g:deoplete#auto_complete_start_length = 2
 let g:deoplete#enable_at_startup = 1
 inoremap <silent><expr> <TAB>
     \ pumvisible() ?  "\<C-n>" :
