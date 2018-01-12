@@ -22,3 +22,6 @@
 [submodule "pack/bundle/start/vim-prettier"]
 	path = pack/bundle/start/vim-prettier
 	url = https://github.com/prettier/vim-prettier.git
+[submodule "pack/bundle/start/deoplete"]
+	path = pack/bundle/start/deoplete
+	url = https://github.com/Shougo/deoplete.nvim.git
