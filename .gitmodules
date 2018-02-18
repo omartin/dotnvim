@@ -1,9 +1,6 @@
 [submodule "pack/bundle/start/vim-surround"]
 	path = pack/bundle/start/vim-surround
 	url = git@github.com:tpope/vim-surround.git
-[submodule "pack/bundle/start/iceberg"]
-	path = pack/bundle/start/iceberg
-	url = git@github.com:cocopon/iceberg.vim.git
 [submodule "pack/bundle/start/lightline"]
 	path = pack/bundle/start/lightline
 	url = git@github.com:itchyny/lightline.vim.git
@@ -22,9 +19,9 @@
 [submodule "pack/bundle/start/vim-prettier"]
 	path = pack/bundle/start/vim-prettier
 	url = https://github.com/prettier/vim-prettier.git
-[submodule "pack/bundle/start/deoplete"]
-	path = pack/bundle/start/deoplete
-	url = https://github.com/Shougo/deoplete.nvim.git
 [submodule "pack/bundle/start/nvim-typescript"]
 	path = pack/bundle/start/nvim-typescript
 	url = https://github.com/mhartington/nvim-typescript.git
+[submodule "pack/bundle/start/ycm"]
+	path = pack/bundle/start/ycm
+	url = git@github.com:Valloric/YouCompleteMe.git
