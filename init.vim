@@ -76,6 +76,15 @@ if has('nvim') && executable('nvr')
   let $VISUAL="nvr -cc split --remote-wait + 'set bufhidden=wipe'"
 endif
 
+" YCM
+"
+let g:ycm_min_num_of_chars_for_completion = 3
+let g:ycm_min_num_identifier_candidate_chars = 3
+let g:ycm_enable_diagnostic_highlighting = 0
+set completeopt-=preview
+let g:ycm_add_preview_to_completeopt = 0
+
+
 " Special
 "
 let g:netrw_banner = 0
