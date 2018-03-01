@@ -81,3 +81,5 @@ let g:netrw_banner = 0
 let g:netrw_list_hide= '^\.git$,^\.DS_Store$'
 
 let g:jsx_ext_required = 0
+
+let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
