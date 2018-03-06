@@ -63,8 +63,15 @@ nnoremap <Tab> :bnext!<CR>
 nnoremap <S-Tab> :bprev!<CR><Paste>
 nnoremap <C-s> :w<CR>
 
-inoremap {<CR> {<CR>}<Esc>O
-inoremap <C-s> <Esc>:w<CR>a
+inoremap {<CR> {<CR>};<Esc>O<Tab>
+inoremap (<CR> (<CR>);<Esc>O<Tab>
+inoremap [<CR> [<CR>];<Esc>O<Tab>
+inoremap {<Space> {}<Left>
+inoremap (<Space> ()<Left>
+inoremap [<Space> []<Left>
+inoremap '<Space> ''<Left>
+inoremap "<Space> ""<Left>
+inoremap <C-s> <Esc>:w<CR>
 
 " Clear the search buffer when hitting return
 "
