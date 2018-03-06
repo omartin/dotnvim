@@ -10,8 +10,9 @@ highlight! TermCursorNC guibg=red guifg=white ctermbg=1 ctermfg=15
 "
 set shiftwidth=2
 set tabstop=2
-set noexpandtab
+set expandtab
 set autoindent
+set list
 set showmatch
 set incsearch
 set hlsearch
