@@ -26,6 +26,7 @@ set showcmd
 set noshowmode
 set hidden
 filetype plugin indent on
+autocmd FileType * setlocal formatoptions-=ro
 
 " Keybinds
 "
