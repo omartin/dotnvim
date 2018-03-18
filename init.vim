@@ -64,9 +64,9 @@ nnoremap <Tab> :bnext!<CR>
 nnoremap <S-Tab> :bprev!<CR><Paste>
 nnoremap <C-s> :w<CR>
 
-inoremap {<CR> {<CR>};<Esc>O<Tab>
-inoremap (<CR> (<CR>);<Esc>O<Tab>
-inoremap [<CR> [<CR>];<Esc>O<Tab>
+inoremap {<CR> {<CR>}<Esc>O<Tab>
+inoremap (<CR> (<CR>)<Esc>O<Tab>
+inoremap [<CR> [<CR>]<Esc>O<Tab>
 inoremap {<Space> {}<Left>
 inoremap (<Space> ()<Left>
 inoremap [<Space> []<Left>
