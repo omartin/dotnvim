@@ -18,6 +18,14 @@ Switch to the `~/.nvim` directory, and fetch submodules:
     git submodule update
 ```
 
+Initialize plugins :
+```
+cd ~/.nvim/pack/bundle/start/ycm
+git submodule update --init --recursive
+npm install -g typescript node
+./install.py --go-completer --js-completer
+```
+
 ## PLUGINS
 ### Installing a plugin
 ```
