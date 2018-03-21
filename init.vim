@@ -37,6 +37,9 @@ map <Leader>P "*P
 map <Leader>n :e ~/notes/<CR>
 map <Leader><Leader> <c-^>
 map <Leader>m :%s//\r/g
+map <leader>b :b <C-d>
+map <leader>e :e .<CR>
+
 
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
