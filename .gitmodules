@@ -25,3 +25,6 @@
 [submodule "pack/bundle/start/ycm"]
 	path = pack/bundle/start/ycm
 	url = git@github.com:Valloric/YouCompleteMe.git
+[submodule "pack/bundle/start/typescript-vim"]
+	path = pack/bundle/start/typescript-vim
+	url = git@github.com:leafgarland/typescript-vim.git
