@@ -36,27 +36,15 @@ map <Leader>p "*p
 map <Leader>P "*P
 map <Leader>n :e ~/notes/<CR>
 map <Leader><Leader> <c-^>
-map <Leader>m :%s//\r/g
-map <leader>b :b <C-d>
-map <leader>e :e .<CR>
-
-
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
+map <Leader>b :b <C-d>
+map <Leader>e :e .<CR>
+map <Leader>j <c-w>j
+map <Leader>k <c-w>k
+map <Leader>h <c-w>h
+map <Leader>l <c-w>l
 
 tnoremap <Esc> <C-\><C-n>
 tnoremap <C-v><Esc> <Esc>
-tnoremap <A-h> <C-\><C-n><C-w>h
-tnoremap <A-j> <C-\><C-n><C-w>j
-tnoremap <A-k> <C-\><C-n><C-w>k
-tnoremap <A-l> <C-\><C-n><C-w>l
-
-nnoremap <A-h> <C-w>h
-nnoremap <A-j> <C-w>j
-nnoremap <A-k> <C-w>k
-nnoremap <A-l> <C-w>l
 
 nnoremap <Left> :vertical resize -1<CR>
 nnoremap <Right> :vertical resize +1<CR>
