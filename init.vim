@@ -1,6 +1,6 @@
 " Visual style
 "
-colorscheme gruvbox
+colorscheme jellybeans
 set background=dark
 syntax on
 highlight! link TermCursor Cursor
