@@ -1,6 +1,9 @@
 " Visual style
 "
-colorscheme jellybeans
+set termguicolors
+"colorscheme jellybeans
+"colorscheme nord
+colorscheme hybrid
 set background=dark
 syntax on
 highlight! link TermCursor Cursor
