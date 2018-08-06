@@ -38,31 +38,18 @@ map <Leader>n :e ~/notes/<CR>
 map <Leader><Leader> <c-^>
 map <Leader>b :b <C-d>
 map <Leader>e :e .<CR>
-map <Leader>j <c-w>j
-map <Leader>k <c-w>k
-map <Leader>h <c-w>h
-map <Leader>l <c-w>l
+map <Leader><Down> <c-w>j
+map <Leader><Up> <c-w>k
+map <Leader><Left> <c-w>h
+map <Leader><Right> <c-w>l
 
 tnoremap <Esc> <C-\><C-n>
 tnoremap <C-v><Esc> <Esc>
-
-nnoremap <Left> :vertical resize -1<CR>
-nnoremap <Right> :vertical resize +1<CR>
-nnoremap <Up> :resize -1<CR>
-nnoremap <Down> :resize +1<CR>
 
 nnoremap <Tab> :bnext!<CR>
 nnoremap <S-Tab> :bprev!<CR><Paste>
 nnoremap <C-s> :w<CR>
 
-inoremap {<CR> {<CR>}<Esc>O<Tab>
-inoremap (<CR> (<CR>)<Esc>O<Tab>
-inoremap [<CR> [<CR>]<Esc>O<Tab>
-inoremap {<Space> {}<Left>
-inoremap (<Space> ()<Left>
-inoremap [<Space> []<Left>
-inoremap '<Space> ''<Left>
-inoremap "<Space> ""<Left>
 inoremap <C-s> <Esc>:w<CR>
 
 " Clear the search buffer when hitting return
