@@ -31,3 +31,6 @@
 [submodule "pack/bundle/start/vim-nord"]
 	path = pack/bundle/start/vim-nord
 	url = git@github.com:arcticicestudio/nord-vim.git
+[submodule "pack/bundle/start/vim-polyglot"]
+	path = pack/bundle/start/vim-polyglot
+	url = git@github.com:sheerun/vim-polyglot.git
