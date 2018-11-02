@@ -30,6 +30,7 @@ set noshowmode
 set hidden
 filetype plugin indent on
 autocmd FileType * setlocal formatoptions-=ro
+set shellcmdflag=-ic
 
 " Keybinds
 "
