@@ -42,10 +42,10 @@ map <Leader>n :e ~/notes/<CR>
 map <Leader><Leader> <c-^>
 map <Leader>b :b <C-d>
 map <Leader>e :e .<CR>
-map <Leader><Down> <c-w>j
-map <Leader><Up> <c-w>k
-map <Leader><Left> <c-w>h
-map <Leader><Right> <c-w>l
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 
 tnoremap <Esc> <C-\><C-n>
 tnoremap <C-v><Esc> <Esc>
