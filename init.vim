@@ -87,3 +87,4 @@ let g:netrw_list_hide= '^\.git$,^\.DS_Store$'
 "
 let g:jsx_ext_required = 0
 let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
+let g:vimwiki_list = [{'path':'~/Dropbox/NOTES/wiki', 'path_html':'~/Dropbox/NOTES/wiki/html/'}]

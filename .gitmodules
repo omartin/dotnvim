@@ -31,3 +31,6 @@
 [submodule "pack/bundle/start/vim-polyglot"]
 	path = pack/bundle/start/vim-polyglot
 	url = git@github.com:sheerun/vim-polyglot.git
+[submodule "pack/bundle/start/vimwiki"]
+	path = pack/bundle/start/vimwiki
+	url = https://github.com/vimwiki/vimwiki.git
