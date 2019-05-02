@@ -38,14 +38,13 @@ let mapleader="\<Space>"
 map <Leader>y "*y
 map <Leader>p "*p
 map <Leader>P "*P
-map <Leader>n :e ~/notes/<CR>
 map <Leader><Leader> <c-^>
-map <Leader>b :b <C-d>
-map <Leader>e :Vex .<CR>
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+map <Leader>m :NERDTreeToggle<CR>
+map <Leader>n :NERDTreeFind<CR>
 
 tnoremap <Esc> <C-\><C-n>
 tnoremap <C-v><Esc> <Esc>
@@ -75,16 +74,13 @@ let g:ycm_enable_diagnostic_highlighting = 0
 set completeopt-=preview
 let g:ycm_add_preview_to_completeopt = 0
 
-" Netrw
-"
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_winsize = 25
-let g:netrw_list_hide= '^\.git$,^\.DS_Store$'
-
 " Misc
 "
 let g:jsx_ext_required = 0
 let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
 let g:vimwiki_list = [{'path':'~/Dropbox/NOTES/wiki', 'syntax': 'markdown', 'path_html':'~/Dropbox/NOTES/wiki/html/'}]
+
+let NERDTreeQuitOnOpen = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+

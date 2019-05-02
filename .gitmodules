@@ -34,3 +34,6 @@
 [submodule "pack/bundle/start/vimwiki"]
 	path = pack/bundle/start/vimwiki
 	url = https://github.com/vimwiki/vimwiki.git
+[submodule "pack/bundle/start/nerdtree"]
+	path = pack/bundle/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
