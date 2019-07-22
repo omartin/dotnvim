@@ -3,7 +3,8 @@
 set termguicolors
 "colorscheme jellybeans
 "colorscheme nord
-colorscheme hybrid
+"colorscheme hybrid
+colorscheme gruvbox
 set background=dark
 syntax on
 highlight! link TermCursor Cursor
