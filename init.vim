@@ -85,3 +85,6 @@ let NERDTreeQuitOnOpen = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 
+let g:lightline = {}
+let g:lightline.colorscheme = 'gruvbox'
+

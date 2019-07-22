@@ -37,3 +37,6 @@
 [submodule "pack/bundle/start/nerdtree"]
 	path = pack/bundle/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "pack/bundle/start/lightline-gruvbox"]
+	path = pack/bundle/start/lightline-gruvbox
+	url = https://github.com/shinchu/lightline-gruvbox.vim.git
