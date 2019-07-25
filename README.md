@@ -23,7 +23,7 @@ Initialize plugins :
 cd ~/.nvim/pack/bundle/start/ycm
 git submodule update --init --recursive
 npm install -g typescript node
-./install.py --go-completer --js-completer
+./install.py --js-completer
 cd ~/.nvim/pack/bundle/start/nvim-typescript
 ./install.sh
 ```
