@@ -40,3 +40,6 @@
 [submodule "pack/bundle/start/lightline-gruvbox"]
 	path = pack/bundle/start/lightline-gruvbox
 	url = https://github.com/shinchu/lightline-gruvbox.vim.git
+[submodule "pack/bundle/start/tender"]
+	path = pack/bundle/start/tender
+	url = https://github.com/jacoborus/tender.vim.git
