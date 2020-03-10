@@ -78,7 +78,6 @@ let g:jsx_ext_required = 0
 let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
 let g:vimwiki_list = [{'path':'~/Dropbox/NOTES/wiki', 'syntax': 'markdown', 'path_html':'~/Dropbox/NOTES/wiki/html/'}]
 
-let NERDTreeQuitOnOpen = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 
