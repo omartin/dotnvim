@@ -28,3 +28,6 @@
 [submodule "pack/bundle/start/lightline-gruvbox"]
 	path = pack/bundle/start/lightline-gruvbox
 	url = https://github.com/shinchu/lightline-gruvbox.vim.git
+[submodule "pack/bundle/start/vim-node"]
+	path = pack/bundle/start/vim-node
+	url = https://github.com/moll/vim-node.git
