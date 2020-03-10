@@ -31,15 +31,9 @@
 [submodule "pack/bundle/start/vim-polyglot"]
 	path = pack/bundle/start/vim-polyglot
 	url = git@github.com:sheerun/vim-polyglot.git
-[submodule "pack/bundle/start/vimwiki"]
-	path = pack/bundle/start/vimwiki
-	url = https://github.com/vimwiki/vimwiki.git
 [submodule "pack/bundle/start/nerdtree"]
 	path = pack/bundle/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
 [submodule "pack/bundle/start/lightline-gruvbox"]
 	path = pack/bundle/start/lightline-gruvbox
 	url = https://github.com/shinchu/lightline-gruvbox.vim.git
-[submodule "pack/bundle/start/tender"]
-	path = pack/bundle/start/tender
-	url = https://github.com/jacoborus/tender.vim.git

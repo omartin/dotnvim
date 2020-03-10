@@ -1,11 +1,7 @@
 " Visual style
 "
 set termguicolors
-"colorscheme jellybeans
-"colorscheme nord
-"colorscheme hybrid
-"colorscheme gruvbox
-colorscheme tender
+colorscheme gruvbox
 set background=dark
 syntax on
 highlight! link TermCursor Cursor
@@ -87,5 +83,5 @@ let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
 
 let g:lightline = {}
-let g:lightline.colorscheme = 'tender'
+let g:lightline.colorscheme = 'gruvbox'
 
