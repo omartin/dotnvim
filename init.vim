@@ -43,6 +43,8 @@ map <Leader>h <C-w>h
 map <Leader>j <C-w>j
 map <Leader>k <C-w>k
 map <Leader>l <C-w>l
+map <Leader>K <C-w>K
+map <Leader>H <C-w>H
 map <Leader>m :NERDTreeToggle<CR>
 map <Leader>n :NERDTreeFind<CR>
 
