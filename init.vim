@@ -4,29 +4,29 @@ set termguicolors
 colorscheme gruvbox
 set background=dark
 syntax on
-highlight! link TermCursor Cursor
-highlight! TermCursorNC guibg=red guifg=white ctermbg=1 ctermfg=15
+"highlight! link TermCursor Cursor
+"highlight! TermCursorNC guibg=red guifg=white ctermbg=1 ctermfg=15
 
 " Editor set tabstop=4
 "
-set shiftwidth=2
-set tabstop=2
+set noerrorbells
+set tabstop=4 softtabstop=4
+set shiftwidth=4
 set expandtab
-set autoindent
+set smartindent
 set list
 set showmatch
 set incsearch
 set hlsearch
-set ignorecase smartcase
+set smartcase
 set cursorline
 set number
-set relativenumber 
+set relativenumber
 set scrolloff=3
 set backspace=indent,eol,start " backspace over everything in insert mode
 set showcmd
 set noshowmode
 set hidden
-set noerrorbells
 set autochdir
 filetype plugin indent on
 autocmd FileType * setlocal formatoptions-=ro

@@ -1,5 +1,11 @@
 # NeoVIM configuration
 
+## PRE-REQUISITES
+```
+brew install nvm ripgrep ag
+npm install -g typescript node
+```
+
 ## INSTALLATION
 Clone the repo:
 ```
@@ -22,7 +28,6 @@ Initialize plugins :
 ```
 cd ~/.nvim/pack/bundle/start/ycm
 git submodule update --init --recursive
-npm install -g typescript node
 ./install.py --js-completer --ts-completer
 ```
 
