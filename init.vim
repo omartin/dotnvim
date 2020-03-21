@@ -1,13 +1,26 @@
+" Plugins
+"
+call plug#begin()
+Plug 'morhetz/gruvbox'
+Plug 'itchyny/lightline.vim'
+Plug 'shinchu/lightline-gruvbox.vim'
+Plug 'junegunn/fzf'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-fugitive'
+Plug 'sheerun/vim-polyglot', {'on': 'Git'}
+Plug 'jremmen/vim-ripgrep'
+Plug 'moll/vim-node'
+Plug 'ycm-core/YouCompleteMe', {'do': './install.py --js-completer --ts-completer'}
+call plug#end()
+
 " Visual style
 "
 set termguicolors
 colorscheme gruvbox
 set background=dark
 syntax on
-"highlight! link TermCursor Cursor
-"highlight! TermCursorNC guibg=red guifg=white ctermbg=1 ctermfg=15
 
-" Editor set tabstop=4
+" Editor
 "
 set noerrorbells
 set tabstop=4 softtabstop=4

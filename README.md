@@ -1,6 +1,7 @@
 # NeoVIM configuration
 
 ## PRE-REQUISITES
+Brew some stuff
 ```
 brew install nvm ripgrep ag
 npm install -g typescript node
@@ -17,35 +18,14 @@ Create symlink:
     ln -s ~/.nvim ~/.config/nvim
 ```
 
-Switch to the `~/.nvim` directory, and fetch submodules:
+Install vim-plug
 ```
-    cd ~/.nvim
-    git submodule init
-    git submodule update
-```
-
-Initialize plugins :
-```
-cd ~/.nvim/pack/bundle/start/ycm
-git submodule update --init --recursive
-./install.py --js-completer --ts-completer
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-## PLUGINS
-### Installing a plugin
+## POST-INSTALL
+Lauch vim and initialize the plugins
 ```
-git submodule add https://github.com/pluginname pack/bundle/start/pluginname
+:PlugInstall
 ```
-
-### Updating plugins
-```
-git submodule update --remote --merge
-```
-
-### Removing a plugin
-```
-git submodule deinit pack/bundle/start/NAMEOFPLUGIN
-git rm pack/bundle/start/NAMEOFPLUGIN
-rm -Rf .git/modules/pack/bundle/start/NAMEOFPLUGIN
-```
-
