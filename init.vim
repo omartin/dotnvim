@@ -40,7 +40,6 @@ set backspace=indent,eol,start " backspace over everything in insert mode
 set showcmd
 set noshowmode
 set hidden
-set autochdir
 filetype plugin indent on
 autocmd FileType * setlocal formatoptions-=ro
 set shellcmdflag=-ic
