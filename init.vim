@@ -1,6 +1,8 @@
 " Plugins
 "
 call plug#begin()
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 Plug 'morhetz/gruvbox'
 Plug 'itchyny/lightline.vim'
 Plug 'shinchu/lightline-gruvbox.vim'
@@ -10,7 +12,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'sheerun/vim-polyglot', {'on': 'Git'}
 Plug 'jremmen/vim-ripgrep'
 Plug 'moll/vim-node'
-Plug 'ycm-core/YouCompleteMe', {'do': './install.py --js-completer --ts-completer'}
 call plug#end()
 
 " Visual style
@@ -77,16 +78,6 @@ if has('nvim') && executable('nvr')
   let $VISUAL="nvr -cc split --remote-wait + 'set bufhidden=wipe'"
 endif
 
-" YCM
-"
-let g:ycm_min_num_of_chars_for_completion = 3
-let g:ycm_min_num_identifier_candidate_chars = 3
-let g:ycm_enable_diagnostic_highlighting = 0
-set completeopt-=preview
-let g:ycm_add_preview_to_completeopt = 0
-nnoremap <silent> <Leader>gd :YcmCompleter GoTo<CR>
-nnoremap <silent> <Leader>gr :YcmCompleter GoToReferences<CR>
-
 " Misc
 "
 let g:jsx_ext_required = 0
@@ -98,3 +89,14 @@ let NERDTreeDirArrows = 1
 let g:lightline = {}
 let g:lightline.colorscheme = 'gruvbox'
 
+" CoC config
+"
+let g:coc_global_extensions = [
+  \ 'coc-snippets',
+  \ 'coc-pairs',
+  \ 'coc-tsserver',
+  \ 'coc-eslint', 
+  \ 'coc-json', 
+  \ ]
+
+source ~/.nvim/coc.vim
