@@ -2,16 +2,17 @@
 "
 call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
+Plug 'scrooloose/nerdtree'
+Plug 'ryanoasis/vim-devicons'
 Plug 'morhetz/gruvbox'
 Plug 'itchyny/lightline.vim'
 Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'junegunn/fzf'
-Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'sheerun/vim-polyglot', {'on': 'Git'}
 Plug 'jremmen/vim-ripgrep'
 Plug 'moll/vim-node'
+Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
 " Visual style
@@ -52,10 +53,6 @@ map <Leader>y "*y
 map <Leader>p "*p
 map <Leader>P "*P
 map <Leader><Leader> <c-^>
-map <Leader>h <C-w>h
-map <Leader>j <C-w>j
-map <Leader>k <C-w>k
-map <Leader>l <C-w>l
 map <Leader>K <C-w>K
 map <Leader>H <C-w>H
 map <Leader>m :NERDTreeToggle<CR>
@@ -78,13 +75,16 @@ if has('nvim') && executable('nvr')
   let $VISUAL="nvr -cc split --remote-wait + 'set bufhidden=wipe'"
 endif
 
+" NERDTree
+"
+let NERDTreeIgnore = ['^node_modules$']
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+
 " Misc
 "
 let g:jsx_ext_required = 0
 let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
-
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
 
 let g:lightline = {}
 let g:lightline.colorscheme = 'gruvbox'
