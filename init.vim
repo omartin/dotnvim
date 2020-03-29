@@ -80,6 +80,7 @@ endif
 let NERDTreeIgnore = ['^node_modules$']
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
+let NERDTreeQuitOnOpen = 1
 
 " Misc
 "
@@ -95,7 +96,7 @@ let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-pairs',
   \ 'coc-tsserver',
-  \ 'coc-eslint', 
+  \ 'coc-eslint',
   \ 'coc-json', 
   \ ]
 
