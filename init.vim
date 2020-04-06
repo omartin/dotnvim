@@ -58,6 +58,15 @@ map <Leader>H <C-w>H
 map <Leader>m :NERDTreeToggle<CR>
 map <Leader>n :NERDTreeFind<CR>
 
+nnoremap <S-Left> :vertical resize -1<CR>
+nnoremap <S-Right> :vertical resize +1<CR>
+nnoremap <S-Up> :resize -1<CR>
+nnoremap <S-Down> :resize +1<CR>
+nnoremap <Left> :vertical resize -5<CR>
+nnoremap <Right> :vertical resize +5<CR>
+nnoremap <Up> :resize -5<CR>
+nnoremap <Down> :resize +5<CR>
+
 tnoremap <Esc> <C-\><C-n>
 tnoremap <C-v><Esc> <Esc>
 
