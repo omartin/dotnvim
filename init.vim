@@ -4,9 +4,9 @@ call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
-Plug 'morhetz/gruvbox'
+Plug 'daviesjamie/vim-base16-lightline'
+Plug 'chriskempson/base16-vim'
 Plug 'itchyny/lightline.vim'
-Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'junegunn/fzf'
 Plug 'tpope/vim-fugitive'
 Plug 'sheerun/vim-polyglot', {'on': 'Git'}
@@ -18,7 +18,7 @@ call plug#end()
 " Visual style
 "
 set termguicolors
-colorscheme gruvbox
+colorscheme base16-default-dark
 set background=dark
 syntax on
 
@@ -97,7 +97,7 @@ let g:jsx_ext_required = 0
 let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
 
 let g:lightline = {}
-let g:lightline.colorscheme = 'gruvbox'
+let g:lightline.colorscheme = 'base16'
 
 " CoC config
 "
