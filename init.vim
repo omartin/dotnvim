@@ -110,3 +110,12 @@ let g:coc_global_extensions = [
   \ ]
 
 source ~/.nvim/coc.vim
+
+" Misc
+"
+function ShowGitDiff()
+  new +set\ filetype=diff | silent read !git diff --cached
+endfunction
+
+autocmd FileType gitcommit exec ShowGitDiff()
+autocmd FileType gitcommit cnoreabbrev q quitall
