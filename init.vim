@@ -58,7 +58,7 @@ map <Leader>H <C-w>H
 map <Leader>m :NERDTreeToggle<CR>
 map <Leader>n :NERDTreeFind<CR>
 
-" Go to tab by number
+noremap <Tab> :tabnext<CR>:file<CR>
 noremap <Leader>1 1gt
 noremap <Leader>2 2gt
 noremap <Leader>3 3gt
