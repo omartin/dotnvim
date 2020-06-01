@@ -13,6 +13,7 @@ Plug 'sheerun/vim-polyglot', {'on': 'Git'}
 Plug 'jremmen/vim-ripgrep'
 Plug 'moll/vim-node'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'justinmk/vim-sneak'
 call plug#end()
 
 " Visual style
@@ -59,6 +60,7 @@ map <Leader>m :NERDTreeToggle<CR>
 map <Leader>n :NERDTreeFind<CR>
 
 noremap <Tab> :tabnext<CR>:file<CR>
+noremap <S-Tab> :tabprevious<CR>:file<CR>
 noremap <Leader>1 1gt
 noremap <Leader>2 2gt
 noremap <Leader>3 3gt
@@ -110,6 +112,11 @@ let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
 
 let g:lightline = {}
 let g:lightline.colorscheme = 'base16'
+
+" Sneak
+let g:sneak#prompt = '› '
+let g:sneak#s_next = 1
+let g:sneak#label = 1
 
 " CoC config
 "
