@@ -14,6 +14,7 @@ Plug 'jremmen/vim-ripgrep'
 Plug 'moll/vim-node'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'justinmk/vim-sneak'
+Plug 'tpope/vim-unimpaired'
 call plug#end()
 
 " Visual style
