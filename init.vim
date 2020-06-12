@@ -15,6 +15,7 @@ Plug 'moll/vim-node'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-unimpaired'
+Plug 'milkypostman/vim-togglelist'
 call plug#end()
 
 " Visual style
@@ -88,12 +89,7 @@ tnoremap <C-v><Esc> <Esc>
 nnoremap <C-s> :w<CR>
 inoremap <C-s> <Esc>:w<CR>
 
-" Clear the search buffer when hitting return
-"
-function! MapCR()
-  nnoremap <cr> :nohlsearch<cr>
-endfunction
-call MapCR()
+nnoremap <expr> <CR> &buftype ==# 'quickfix' ? "\<CR>" : ':nohlsearch<CR>'
 
 if has('nvim') && executable('nvr')
   let $VISUAL="nvr -cc split --remote-wait + 'set bufhidden=wipe'"
