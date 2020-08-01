@@ -89,8 +89,8 @@ tnoremap <C-v><Esc> <Esc>
 
 nnoremap <C-s> :w<CR>
 inoremap <C-s> <Esc>:w<CR>
-
-nnoremap <expr> <CR> &buftype ==# 'quickfix' ? "\<CR>" : ':nohlsearch<CR>'
+inoremap <BS> <Nop>
+nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
 
 if has('nvim') && executable('nvr')
   let $VISUAL="nvr -cc split --remote-wait + 'set bufhidden=wipe'"
