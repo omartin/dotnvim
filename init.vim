@@ -8,14 +8,14 @@ Plug 'daviesjamie/vim-base16-lightline'
 Plug 'chriskempson/base16-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf'
-Plug 'tpope/vim-fugitive'
 Plug 'sheerun/vim-polyglot', {'on': 'Git'}
 Plug 'jremmen/vim-ripgrep'
 Plug 'moll/vim-node'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-unimpaired'
-Plug 'milkypostman/vim-togglelist'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 call plug#end()
 
 " Visual style
@@ -49,6 +49,8 @@ set hidden
 filetype plugin indent on
 autocmd FileType * setlocal formatoptions-=ro
 set shellcmdflag=-ic
+set splitbelow
+set splitright
 
 " Keybinds
 "
@@ -74,6 +76,8 @@ noremap <Leader>7 7gt
 noremap <Leader>8 8gt
 noremap <Leader>9 9gt
 noremap <Leader>0 :tablast<cr>
+noremap <Leader>- <C-W>s
+noremap <Leader>\| <C-W>v
 
 nnoremap <S-Left> :vertical resize -1<CR>
 nnoremap <S-Right> :vertical resize +1<CR>
