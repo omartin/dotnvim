@@ -1,6 +1,13 @@
 " Plugins
 "
 call plug#begin()
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-projectionist'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'radenling/vim-dispatch-neovim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
@@ -12,10 +19,6 @@ Plug 'sheerun/vim-polyglot', {'on': 'Git'}
 Plug 'jremmen/vim-ripgrep'
 Plug 'moll/vim-node'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'tpope/vim-unimpaired'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
 call plug#end()
 
 " Visual style
@@ -93,7 +96,6 @@ tnoremap <C-v><Esc> <Esc>
 
 nnoremap <C-s> :w<CR>
 inoremap <C-s> <Esc>:w<CR>
-inoremap <BS> <Nop>
 nnoremap <silent> <Esc><Esc> <Esc>:nohlsearch<CR><Esc>
 
 if has('nvim') && executable('nvr')
