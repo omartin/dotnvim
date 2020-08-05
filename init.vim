@@ -102,6 +102,10 @@ if has('nvim') && executable('nvr')
   let $VISUAL="nvr -cc split --remote-wait + 'set bufhidden=wipe'"
 endif
 
+" Terminal
+highlight! link TermCursor Cursor
+highlight! TermCursorNC guibg=red guifg=white ctermbg=1 ctermfg=15
+
 " NERDTree
 "
 let NERDTreeIgnore = ['^node_modules$']
@@ -116,11 +120,6 @@ let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
 
 let g:lightline = {}
 let g:lightline.colorscheme = 'base16'
-
-" Sneak
-let g:sneak#prompt = '› '
-let g:sneak#s_next = 1
-let g:sneak#label = 1
 
 " CoC config
 "
