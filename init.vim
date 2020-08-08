@@ -54,6 +54,7 @@ autocmd FileType * setlocal formatoptions-=ro
 set shellcmdflag=-ic
 set splitbelow
 set splitright
+set undofile
 
 " Keybinds
 "
