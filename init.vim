@@ -79,9 +79,11 @@ noremap <Leader>6 6gt
 noremap <Leader>7 7gt
 noremap <Leader>8 8gt
 noremap <Leader>9 9gt
-noremap <Leader>0 :tablast<cr>
+noremap <Leader>0 :tablast<CR>
 noremap <Leader>- <C-W>s
 noremap <Leader>\| <C-W>v
+noremap <Leader>t :tabnew<CR>
+noremap <Leader>T :call Term()<CR>
 
 nnoremap <S-Left> :vertical resize -1<CR>
 nnoremap <S-Right> :vertical resize +1<CR>
@@ -106,6 +108,13 @@ endif
 " Terminal
 highlight! link TermCursor Cursor
 highlight! TermCursorNC guibg=red guifg=white ctermbg=1 ctermfg=15
+
+function! Term()
+  terminal
+  setlocal nonumber
+  setlocal norelativenumber
+  startinsert
+endfunction()
 
 " NERDTree
 "
