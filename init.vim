@@ -43,7 +43,7 @@ set hlsearch
 set smartcase
 set cursorline
 set number
-set relativenumber
+" set relativenumber " never really used it
 set scrolloff=3
 set backspace=indent,eol,start " backspace over everything in insert mode
 set showcmd
