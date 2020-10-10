@@ -21,10 +21,11 @@ call plug#end()
 " Visual style
 "
 set termguicolors
-colorscheme base16-default-dark
+colorscheme base16-black-metal-marduk
 set background=dark
 syntax on
 hi Pmenu guibg=#333333
+
 
 " Editor
 "
