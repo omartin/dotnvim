@@ -16,6 +16,7 @@ Plug 'sheerun/vim-polyglot', {'on': 'Git'}
 Plug 'jremmen/vim-ripgrep'
 Plug 'moll/vim-node'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'norcalli/nvim-colorizer.lua'
 call plug#end()
 
 " Visual style
@@ -25,7 +26,7 @@ colorscheme base16-default-dark
 set background=dark
 syntax on
 hi Pmenu guibg=#333333
-
+lua require'colorizer'.setup()
 
 " Editor
 "
