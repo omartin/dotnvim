@@ -17,7 +17,6 @@ Plug 'jremmen/vim-ripgrep'
 Plug 'moll/vim-node'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'norcalli/nvim-colorizer.lua'
-Plug 'fatih/vim-go'
 call plug#end()
 
 " Visual style
