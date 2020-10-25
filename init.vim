@@ -17,6 +17,7 @@ Plug 'jremmen/vim-ripgrep'
 Plug 'moll/vim-node'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'norcalli/nvim-colorizer.lua'
+Plug 'rust-lang/rust.vim'
 call plug#end()
 
 " Visual style
