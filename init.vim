@@ -129,7 +129,9 @@ let g:coc_global_extensions = [
   \ 'coc-pairs',
   \ 'coc-tsserver',
   \ 'coc-eslint',
-  \ 'coc-json', 
+  \ 'coc-json',
+  \ 'coc-go',
+  \ 'coc-rls'
   \ ]
 
 source ~/.nvim/coc.vim
