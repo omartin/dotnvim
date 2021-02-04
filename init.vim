@@ -1,23 +1,31 @@
 " Plugins
 "
 call plug#begin()
+" Search
+Plug 'junegunn/fzf'
+Plug 'jremmen/vim-ripgrep'
+" Editor
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" UI
+Plug 'norcalli/nvim-colorizer.lua'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'daviesjamie/vim-base16-lightline'
 Plug 'chriskempson/base16-vim'
 Plug 'itchyny/lightline.vim'
-Plug 'junegunn/fzf'
+" Languages
 Plug 'sheerun/vim-polyglot', {'on': 'Git'}
-Plug 'jremmen/vim-ripgrep'
 Plug 'moll/vim-node'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'norcalli/nvim-colorizer.lua'
 Plug 'rust-lang/rust.vim'
+Plug 'peitalin/vim-jsx-typescript'
+" Debug
+Plug 'itmammoth/maximize.vim'
+Plug 'puremourning/vimspector'
 call plug#end()
 
 " Visual style
