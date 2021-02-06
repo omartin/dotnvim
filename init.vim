@@ -23,6 +23,7 @@ Plug 'sheerun/vim-polyglot', {'on': 'Git'}
 Plug 'moll/vim-node'
 Plug 'rust-lang/rust.vim'
 Plug 'peitalin/vim-jsx-typescript'
+Plug 'leafgarland/typescript-vim'
 " Debug
 Plug 'itmammoth/maximize.vim'
 Plug 'puremourning/vimspector'
