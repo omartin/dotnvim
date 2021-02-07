@@ -18,6 +18,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'daviesjamie/vim-base16-lightline'
 Plug 'chriskempson/base16-vim'
 Plug 'itchyny/lightline.vim'
+Plug 'airblade/vim-gitgutter'
 " Languages
 Plug 'sheerun/vim-polyglot', {'on': 'Git'}
 Plug 'moll/vim-node'
