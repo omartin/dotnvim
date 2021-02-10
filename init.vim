@@ -8,7 +8,6 @@ Plug 'jremmen/vim-ripgrep'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " UI
 Plug 'norcalli/nvim-colorizer.lua'
@@ -77,6 +76,9 @@ map <Leader>K <C-w>K
 map <Leader>H <C-w>H
 map <Leader>m :NERDTreeToggle<CR>
 map <Leader>n :NERDTreeFind<CR>
+map <Leader>rg :Rg<CR>
+map <Leader>] :cnext<CR>
+map <Leader>[ :cprevious<CR>
 
 noremap <Tab> :tabnext<CR>:file<CR>
 noremap <S-Tab> :tabprevious<CR>:file<CR>
