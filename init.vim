@@ -18,6 +18,7 @@ Plug 'daviesjamie/vim-base16-lightline'
 Plug 'chriskempson/base16-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'liuchengxu/vim-which-key'
 " Languages
 Plug 'sheerun/vim-polyglot', {'on': 'Git'}
 Plug 'moll/vim-node'
@@ -79,6 +80,8 @@ map <Leader>n :NERDTreeFind<CR>
 map <Leader>rg :Rg<CR>
 map <Leader>] :cnext<CR>
 map <Leader>[ :cprevious<CR>
+
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
 noremap <Tab> :tabnext<CR>:file<CR>
 noremap <S-Tab> :tabprevious<CR>:file<CR>
