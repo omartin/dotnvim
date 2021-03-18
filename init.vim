@@ -8,7 +8,8 @@ Plug 'jremmen/vim-ripgrep'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/nvim-compe'
 " UI
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'christoomey/vim-tmux-navigator'
@@ -137,16 +138,13 @@ let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
 let g:lightline = {}
 let g:lightline.colorscheme = 'base16'
 
-" CoC config
-"
-let g:coc_global_extensions = [
-  \ 'coc-snippets',
-  \ 'coc-pairs',
-  \ 'coc-tsserver',
-  \ 'coc-eslint',
-  \ 'coc-json',
-  \ 'coc-go',
-  \ 'coc-rls'
-  \ ]
-
-source ~/.nvim/coc.vim
+" LSP
+lua require'lspconfig'.tsserver.setup{}
+nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
+nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
+nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
+nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
