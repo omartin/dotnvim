@@ -31,6 +31,8 @@ Plug 'itmammoth/maximize.vim'
 Plug 'puremourning/vimspector'
 call plug#end()
 
+luafile ~/.config/nvim/lua/compe-config.lua
+
 " Visual style
 "
 set termguicolors
