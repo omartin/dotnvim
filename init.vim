@@ -8,21 +8,14 @@ Plug 'jremmen/vim-ripgrep'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/nvim-compe'
-" Telescope
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
 " UI
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'scrooloose/nerdtree'
-Plug 'ryanoasis/vim-devicons'
+"Plug 'ryanoasis/vim-devicons'
 Plug 'daviesjamie/vim-base16-lightline'
 Plug 'chriskempson/base16-vim'
 Plug 'itchyny/lightline.vim'
-Plug 'airblade/vim-gitgutter'
 Plug 'liuchengxu/vim-which-key'
 " Languages
 Plug 'sheerun/vim-polyglot', {'on': 'Git'}
@@ -33,6 +26,22 @@ Plug 'leafgarland/typescript-vim'
 " Debug
 Plug 'itmammoth/maximize.vim'
 Plug 'puremourning/vimspector'
+
+" NEW CONF
+" Utils
+Plug 'nvim-lua/plenary.nvim'
+" LSP
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/nvim-compe'
+" Git
+Plug 'lewis6991/gitsigns.nvim'
+" Telescope
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+" UI -> not sure
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'folke/lsp-trouble.nvim'
+
 call plug#end()
 
 luafile ~/.config/nvim/lua/compe-config.lua
@@ -48,7 +57,10 @@ colorscheme base16-default-dark
 set background=dark
 syntax on
 hi Pmenu guibg=#333333
-lua require'colorizer'.setup()
+lua require('colorizer').setup()
+lua require('gitsigns').setup()
+lua require('nvim-web-devicons').setup()
+lua require('trouble').setup()
 
 " Editor
 "
@@ -76,6 +88,7 @@ set shellcmdflag=-ic
 set splitbelow
 set splitright
 set undofile
+set signcolumn=yes:1
 
 " Keybinds
 "
@@ -158,3 +171,13 @@ nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
 nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
+
+"vim.fn.sign_define("LspDiagnosticsSignError",
+"    {text = "", texthl = "GruvboxRed"})
+"vim.fn.sign_define("LspDiagnosticsSignWarning",
+"    {text = "", texthl = "GruvboxYellow"})
+"vim.fn.sign_define("LspDiagnosticsSignInformation",
+"    {text = "", texthl = "GruvboxBlue"})
+"vim.fn.sign_define("LspDiagnosticsSignHint",
+"    {text = "", texthl = "GruvboxAqua"})
+
