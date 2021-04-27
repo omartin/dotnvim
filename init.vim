@@ -172,12 +172,29 @@ nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
 nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 
-"vim.fn.sign_define("LspDiagnosticsSignError",
-"    {text = "", texthl = "GruvboxRed"})
-"vim.fn.sign_define("LspDiagnosticsSignWarning",
-"    {text = "", texthl = "GruvboxYellow"})
-"vim.fn.sign_define("LspDiagnosticsSignInformation",
-"    {text = "", texthl = "GruvboxBlue"})
-"vim.fn.sign_define("LspDiagnosticsSignHint",
-"    {text = "", texthl = "GruvboxAqua"})
+lua << EOF
+local lsp = require('lspconfig')
+vim.fn.sign_define('LspDiagnosticsSignError', {
+  texthl = 'LspDiagnosticsSignError',
+  numhl = 'LspDiagnosticsSignError',
+  text = '',
+})
 
+vim.fn.sign_define('LspDiagnosticsSignWarning', {
+  texthl = 'LspDiagnosticsSignWarning',
+  numhl = 'LspDiagnosticsSignWarning',
+  text = '',
+})
+
+vim.fn.sign_define('LspDiagnosticsSignInformation', {
+  texthl = 'LspDiagnosticsSignInformation',
+  numhl = 'LspDiagnosticsSignInformation',
+  text = '',
+})
+
+vim.fn.sign_define('LspDiagnosticsSignHint', {
+  texthl = 'LspDiagnosticsSignHint',
+  numhl = 'LspDiagnosticsSignHint',
+  text = '',
+})
+EOF
