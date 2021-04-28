@@ -3,9 +3,11 @@
 ## PRE-REQUISITES
 Brew some stuff
 ```
-brew install nvm ripgrep ag
+brew install nvm ripgrep ag ninja
 npm install -g typescript node
 ```
+
+Install [lua-language-server](https://github.com/sumneko/lua-language-server/wiki/Build-and-Run-(Standalone))
 
 ## INSTALLATION
 Clone the repo:

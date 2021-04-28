@@ -33,6 +33,10 @@ Plug 'nvim-lua/plenary.nvim'
 " LSP
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
+" LUA
+Plug 'tjdevries/nlua.nvim'
+Plug 'nvim-lua/completion-nvim' " (OPTIONAL): better auto-completion UX experience
+Plug 'euclidianAce/BetterLua.vim' " (OPTIONAL): better Lua syntax highlighting
 " Git
 Plug 'lewis6991/gitsigns.nvim'
 " Telescope
@@ -196,5 +200,17 @@ vim.fn.sign_define('LspDiagnosticsSignHint', {
   texthl = 'LspDiagnosticsSignHint',
   numhl = 'LspDiagnosticsSignHint',
   text = '',
+})
+EOF
+
+lua << EOF
+require('nlua.lsp.nvim').setup(require('lspconfig'), {
+  on_attach = custom_nvim_lspconfig_attach,
+
+  -- Include globals you want to tell the LSP are real :)
+  globals = {
+    -- Colorbuddy
+    "Color", "c", "Group", "g", "s",
+  }
 })
 EOF
