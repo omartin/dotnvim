@@ -76,7 +76,7 @@ _G.packer_plugins = {
     path = "/Users/olive/.local/share/nvim/site/pack/packer/start/base16-vim"
   },
   ["coc.nvim"] = {
-    config = { "\27LJ\2\n¯\1\0\0\3\0\6\0\t6\0\0\0009\0\1\0'\2\2\0B\0\2\0016\0\0\0009\0\3\0005\1\5\0=\1\4\0K\0\1\0\1\b\0\0\17coc-snippets\14coc-pairs\17coc-tsserver\15coc-eslint\rcoc-json\vcoc-go\fcoc-rls\28g:coc_global_extensions\6g\27source ~/.nvim/coc.vim\bcmd\bvim\0" },
+    config = { "\27LJ\2\n·\1\0\0\3\0\6\0\t6\0\0\0009\0\1\0'\2\2\0B\0\2\0016\0\0\0009\0\3\0005\1\5\0=\1\4\0K\0\1\0\1\t\0\0\17coc-snippets\14coc-pairs\17coc-tsserver\15coc-eslint\rcoc-json\vcoc-go\fcoc-rls\fcoc-lua\28g:coc_global_extensions\6g\27source ~/.nvim/coc.vim\bcmd\bvim\0" },
     loaded = true,
     path = "/Users/olive/.local/share/nvim/site/pack/packer/start/coc.nvim"
   },
@@ -84,18 +84,41 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/olive/.local/share/nvim/site/pack/packer/start/fzf"
   },
+  ["gitsigns.nvim"] = {
+    config = { "\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0" },
+    loaded = true,
+    path = "/Users/olive/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
+  },
+  ["lightline.vim"] = {
+    config = { "\27LJ\2\n\\\0\0\2\0\5\0\t6\0\0\0009\0\1\0004\1\0\0=\1\2\0006\0\0\0009\0\1\0'\1\4\0=\1\3\0K\0\1\0\vbase16\28g:lightline.colorscheme\16g:lightline\6g\bvim\0" },
+    loaded = true,
+    path = "/Users/olive/.local/share/nvim/site/pack/packer/start/lightline.vim"
+  },
   nerdtree = {
     config = { "\27LJ\2\nª\1\0\0\2\0\a\0\0176\0\0\0009\0\1\0005\1\3\0=\1\2\0006\0\0\0009\0\1\0)\1\1\0=\1\4\0006\0\0\0009\0\1\0)\1\1\0=\1\5\0006\0\0\0009\0\1\0)\1\1\0=\1\6\0K\0\1\0\23NERDTreeQuitOnOpen\22NERDTreeDirArrows\22NERDTreeMinimalUI\1\2\0\0\19^node_modules$\19NERDTreeIgnore\6g\bvim\0" },
     loaded = true,
     path = "/Users/olive/.local/share/nvim/site/pack/packer/start/nerdtree"
   },
+  ["nvim-colorizer.lua"] = {
+    config = { "\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14colorizer\frequire\0" },
+    loaded = true,
+    path = "/Users/olive/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/Users/olive/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
   },
-  ["vim-devicons"] = {
+  ["nvim-web-devicons"] = {
     loaded = true,
-    path = "/Users/olive/.local/share/nvim/site/pack/packer/start/vim-devicons"
+    path = "/Users/olive/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
+  },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/Users/olive/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+  },
+  ["vim-base16-lightline"] = {
+    loaded = true,
+    path = "/Users/olive/.local/share/nvim/site/pack/packer/start/vim-base16-lightline"
   },
   ["vim-fugitive"] = {
     loaded = true,
@@ -125,17 +148,29 @@ _G.packer_plugins = {
 }
 
 time("Defining packer_plugins", false)
--- Config for: nerdtree
-time("Config for nerdtree", true)
-try_loadstring("\27LJ\2\nª\1\0\0\2\0\a\0\0176\0\0\0009\0\1\0005\1\3\0=\1\2\0006\0\0\0009\0\1\0)\1\1\0=\1\4\0006\0\0\0009\0\1\0)\1\1\0=\1\5\0006\0\0\0009\0\1\0)\1\1\0=\1\6\0K\0\1\0\23NERDTreeQuitOnOpen\22NERDTreeDirArrows\22NERDTreeMinimalUI\1\2\0\0\19^node_modules$\19NERDTreeIgnore\6g\bvim\0", "config", "nerdtree")
-time("Config for nerdtree", false)
 -- Config for: which-key.nvim
 time("Config for which-key.nvim", true)
 try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
 time("Config for which-key.nvim", false)
+-- Config for: lightline.vim
+time("Config for lightline.vim", true)
+try_loadstring("\27LJ\2\n\\\0\0\2\0\5\0\t6\0\0\0009\0\1\0004\1\0\0=\1\2\0006\0\0\0009\0\1\0'\1\4\0=\1\3\0K\0\1\0\vbase16\28g:lightline.colorscheme\16g:lightline\6g\bvim\0", "config", "lightline.vim")
+time("Config for lightline.vim", false)
+-- Config for: gitsigns.nvim
+time("Config for gitsigns.nvim", true)
+try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
+time("Config for gitsigns.nvim", false)
+-- Config for: nerdtree
+time("Config for nerdtree", true)
+try_loadstring("\27LJ\2\nª\1\0\0\2\0\a\0\0176\0\0\0009\0\1\0005\1\3\0=\1\2\0006\0\0\0009\0\1\0)\1\1\0=\1\4\0006\0\0\0009\0\1\0)\1\1\0=\1\5\0006\0\0\0009\0\1\0)\1\1\0=\1\6\0K\0\1\0\23NERDTreeQuitOnOpen\22NERDTreeDirArrows\22NERDTreeMinimalUI\1\2\0\0\19^node_modules$\19NERDTreeIgnore\6g\bvim\0", "config", "nerdtree")
+time("Config for nerdtree", false)
+-- Config for: nvim-colorizer.lua
+time("Config for nvim-colorizer.lua", true)
+try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14colorizer\frequire\0", "config", "nvim-colorizer.lua")
+time("Config for nvim-colorizer.lua", false)
 -- Config for: coc.nvim
 time("Config for coc.nvim", true)
-try_loadstring("\27LJ\2\n¯\1\0\0\3\0\6\0\t6\0\0\0009\0\1\0'\2\2\0B\0\2\0016\0\0\0009\0\3\0005\1\5\0=\1\4\0K\0\1\0\1\b\0\0\17coc-snippets\14coc-pairs\17coc-tsserver\15coc-eslint\rcoc-json\vcoc-go\fcoc-rls\28g:coc_global_extensions\6g\27source ~/.nvim/coc.vim\bcmd\bvim\0", "config", "coc.nvim")
+try_loadstring("\27LJ\2\n·\1\0\0\3\0\6\0\t6\0\0\0009\0\1\0'\2\2\0B\0\2\0016\0\0\0009\0\3\0005\1\5\0=\1\4\0K\0\1\0\1\t\0\0\17coc-snippets\14coc-pairs\17coc-tsserver\15coc-eslint\rcoc-json\vcoc-go\fcoc-rls\fcoc-lua\28g:coc_global_extensions\6g\27source ~/.nvim/coc.vim\bcmd\bvim\0", "config", "coc.nvim")
 time("Config for coc.nvim", false)
 if should_profile then save_profiles() end
 
