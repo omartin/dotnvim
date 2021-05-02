@@ -1,4 +1,3 @@
-require('packer_install')
 require('plugins')
 require('editor')
 require('keymaps')
