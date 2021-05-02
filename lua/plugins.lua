@@ -58,8 +58,5 @@ paq {
 paq {'daviesjamie/vim-base16-lightline'}
 paq {
   'itchyny/lightline.vim',
-  run = function()
-    vim.g['g:lightline'] = {}
-    vim.g['g:lightline.colorscheme'] = 'base16'
-  end
+  run = vim.cmd 'let g:lightline = { "colorscheme": "base16" }'
 }
