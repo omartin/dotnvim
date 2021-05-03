@@ -27,16 +27,14 @@ map('n', '<Tab>', ':tabnext<CR>:file<CR>') -- Next tab
 map('n', '<S-Tab>', ':tabprevious<CR>:file<CR>') -- Previous tab
 
 -- Telescope
-map('n', '<Leader>ff', ':Telescope find_files<CR>')
-map('n', '<Leader>fg', ':Telescope live_grep<CR>')
-map('n', '<Leader>fb', ':Telescope buffers<CR>')
-map('n', '<Leader>fh', ':Telescope help_tags<CR>')
+map('n', '<C-p>', ':Telescope find_files<CR>')
+map('n', '<C-g>', ':Telescope live_grep<CR>')
 
 -- To be replaced
-map('n', '<C-p>', ':FZF<CR>')
 map('n', '<Leader>m', ':NERDTreeToggle<CR>')
 map('n', '<Leader>n', ':NERDTreeFind<CR>')
 
--- QQQ
--- map <Leader>] :cnext<CR>
--- map <Leader>[ :cprevious<CR>
+-- Explorer
+map('n', '<Leader>m', ':NvimTreeToggle<CR>')
+map('n', '<Leader>r', ':NvimTreeRefresh<CR>')
+map('n', '<Leader>n', ':NvimTreeFindFile<CR>')

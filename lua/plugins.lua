@@ -21,17 +21,6 @@ paq {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 local ts = require 'nvim-treesitter.configs'
 ts.setup {ensure_installed = 'maintained', highlight = {enable = true}}
 
--- Search
-paq {'junegunn/fzf'}
-paq {'jremmen/vim-ripgrep'}
-
--- Explorer
-paq { 'scrooloose/nerdtree'}
-vim.g['NERDTreeIgnore'] = {'^node_modules$'}
-vim.g['NERDTreeMinimalUI'] = 1
-vim.g['NERDTreeDirArrows'] = 1
-vim.g['NERDTreeQuitOnOpen'] = 1
-
 -- Editor
 paq {'tpope/vim-fugitive'}
 paq {'tpope/vim-repeat'}
@@ -67,3 +56,11 @@ vim.cmd 'let g:lightline = { "colorscheme": "base16" }'
 -- Telescope
 paq {'nvim-lua/popup.nvim'}
 paq {'nvim-telescope/telescope.nvim'}
+
+-- Explorer
+paq {'kyazdani42/nvim-tree.lua'}
+vim.cmd 'let g:nvim_tree_width = 40'
+vim.cmd 'let g:nvim_tree_ignore = [ ".git", "node_modules", ".cache" ]'
+vim.cmd 'let g:nvim_tree_auto_open = 1'
+vim.cmd 'let g:nvim_tree_auto_close = 1'
+vim.cmd 'let g:nvim_tree_quit_on_open = 1'
