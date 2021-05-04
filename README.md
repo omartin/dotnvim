@@ -18,14 +18,14 @@ Create symlink:
     ln -s ~/.nvim ~/.config/nvim
 ```
 
-Install vim-plug
+Install paq
 ```
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+git clone https://github.com/savq/paq-nvim.git \
+    "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/pack/paqs/opt/paq-nvim
 ```
 
 ## POST-INSTALL
-Lauch vim and initialize the plugins
+Lauch neovim and initialize the plugins
 ```
-:PlugInstall
+:PaqInstall
 ```
