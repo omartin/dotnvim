@@ -4,7 +4,7 @@
 Brew some stuff
 ```
 brew install nvm ripgrep ag
-npm install -g typescript node
+npm install -g typescript typescript-language-server diagnostic-languageserver eslint_d
 ```
 
 ## INSTALLATION
