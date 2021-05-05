@@ -46,8 +46,52 @@ vim.cmd 'let g:nvim_tree_quit_on_open = 1'
 
 -- LSP and completion
 paq {'neovim/nvim-lspconfig'}
+paq {'glepnir/lspsaga.nvim'}
+
+vim.cmd("nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>")
+vim.cmd("nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>")
+vim.cmd("nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>")
+vim.cmd("nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>")
+vim.cmd("nnoremap <silent> ca :Lspsaga code_action<CR>")
+vim.cmd("nnoremap <silent> K :Lspsaga hover_doc<CR>")
+-- vim.cmd('nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>')
+vim.cmd("nnoremap <silent> <C-p> :Lspsaga diagnostic_jump_prev<CR>")
+vim.cmd("nnoremap <silent> <C-n> :Lspsaga diagnostic_jump_next<CR>")
+-- scroll down hover doc or scroll in definition preview
+vim.cmd("nnoremap <silent> <C-f> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>")
+-- scroll up hover doc
+vim.cmd("nnoremap <silent> <C-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>")
+vim.cmd('command! -nargs=0 LspVirtualTextToggle lua require("lsp/virtual_text").toggle()')
+
+local lsp = require('lspconfig')
+vim.fn.sign_define('LspDiagnosticsSignError', {
+  texthl = 'LspDiagnosticsSignError',
+  numhl = 'LspDiagnosticsSignError',
+  text = '',
+})
+
+vim.fn.sign_define('LspDiagnosticsSignWarning', {
+  texthl = 'LspDiagnosticsSignWarning',
+  numhl = 'LspDiagnosticsSignWarning',
+  text = '',
+})
+
+vim.fn.sign_define('LspDiagnosticsSignInformation', {
+  texthl = 'LspDiagnosticsSignInformation',
+  numhl = 'LspDiagnosticsSignInformation',
+  text = '',
+})
+
+vim.fn.sign_define('LspDiagnosticsSignHint', {
+  texthl = 'LspDiagnosticsSignHint',
+  numhl = 'LspDiagnosticsSignHint',
+  text = '',
+})
+
+
 require('lspconfig').tsserver.setup{}
 
+--[[
 local system_name
 if vim.fn.has("mac") == 1 then
   system_name = "OSX"
@@ -90,4 +134,34 @@ require'lspconfig'.sumneko_lua.setup {
       },
     },
   },
+}
+]]
+
+-- Completion
+paq {'hrsh7th/nvim-compe'}
+
+vim.o.completeopt = "menuone,noselect"
+
+require('compe').setup {
+  enabled = true;
+  autocomplete = true;
+  debug = false;
+  min_length = 1;
+  preselect = 'enable';
+  throttle_time = 80;
+  source_timeout = 200;
+  incomplete_delay = 400;
+  max_abbr_width = 100;
+  max_kind_width = 100;
+  max_menu_width = 100;
+  documentation = true;
+
+  source = {
+    path = true;
+    buffer = true;
+    calc = true;
+    nvim_lsp = true;
+    nvim_lua = true;
+    vsnip = true;
+  };
 }
