@@ -1,5 +1,5 @@
 vim.cmd 'let g:nvim_tree_width = 40'
 vim.cmd 'let g:nvim_tree_ignore = [ ".git", "node_modules", ".cache" ]'
-vim.cmd 'let g:nvim_tree_auto_open = 1'
+--vim.cmd 'let g:nvim_tree_auto_open = 1'
 vim.cmd 'let g:nvim_tree_auto_close = 1'
 vim.cmd 'let g:nvim_tree_quit_on_open = 1'
