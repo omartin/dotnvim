@@ -14,8 +14,12 @@ map('n', '<Leader>q', ':q<CR>') -- Close buffer
 map('n', '<Esc><Esc>', '<Esc>:nohlsearch<CR><Esc>') -- Hide search highlight
 
 -- System clipboard
-map('n', '<Leader>y', '"*y') -- Yank into system's clipboard
-map('n', '<Leader>p', '"*p') -- Paste from system's clipboard
+vim.cmd('map <Leader>y "*y')
+vim.cmd('map <Leader>p "*p')
+--[[
+map('n', '<Leader>y', '\"*y') -- Yank into system's clipboard
+map('n', '<Leader>p', '\"*p') -- Paste from system's clipboard
+]]
 
 -- Splits
 map('n', '<Leader>-', '<C-W>s') -- Split horizontal
