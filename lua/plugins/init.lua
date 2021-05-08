@@ -29,7 +29,6 @@ paq {'kyazdani42/nvim-tree.lua'}
 paq {'neovim/nvim-lspconfig'}
 paq {'glepnir/lspsaga.nvim'}
 paq {'hrsh7th/nvim-compe'}
--- Debugger
 
 
 -- Plugins configuration
