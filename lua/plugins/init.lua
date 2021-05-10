@@ -26,10 +26,21 @@ paq {'nvim-telescope/telescope.nvim'}
 -- Explorer
 paq {'kyazdani42/nvim-tree.lua'}
 -- LSP and completion
-paq {'neovim/nvim-lspconfig'}
-paq {'glepnir/lspsaga.nvim'}
-paq {'hrsh7th/nvim-compe'}
-
+--paq {'neovim/nvim-lspconfig'}
+--paq {'glepnir/lspsaga.nvim'}
+--paq {'hrsh7th/nvim-compe'}
+-- CoC
+paq {'neoclide/coc.nvim'}
+vim.cmd('source ~/.nvim/coc.vim')
+vim.g['g:coc_global_extensions'] = {
+  'coc-snippets',
+  'coc-tsserver',
+  'coc-eslint',
+  'coc-json',
+  'coc-go',
+  'coc-rls',
+  'coc-lua'
+}
 
 -- Plugins configuration
 require('plugins/base16')
@@ -40,6 +51,6 @@ require('plugins/gitsigns')
 require('plugins/lightline')
 require('plugins/nvim-tree')
 require('plugins/telescope')
-require('plugins/lspconfig')
-require('plugins/lspsaga')
-require('plugins/compe')
+--require('plugins/lspconfig')
+--require('plugins/lspsaga')
+--require('plugins/compe')

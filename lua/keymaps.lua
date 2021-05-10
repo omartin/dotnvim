@@ -40,11 +40,11 @@ map('n', '<Leader>fs', ':Telescope git_status<CR>')
 map('n', '<Leader>fc', ':Telescope git_commits<CR>')
 map('n', '<Leader>fb', ':Telescope git_branches<CR>')
 
-vim.cmd("nnoremap <silent> gr <cmd>Telescope lsp_references<CR>")
-vim.cmd("nnoremap <silent> gd <cmd>Telescope lsp_definitions<CR>")
-vim.cmd("nnoremap <silent> gi <cmd>Telescope lsp_implementations<CR>")
-vim.cmd("nnoremap <silent> gs <cmd>Telescope lsp_document_symbols<CR>")
-vim.cmd("nnoremap <silent> gS <cmd>Telescope lsp_workspace_symbols<CR>")
+--vim.cmd("nnoremap <silent> gr <cmd>Telescope lsp_references<CR>")
+--vim.cmd("nnoremap <silent> gd <cmd>Telescope lsp_definitions<CR>")
+--vim.cmd("nnoremap <silent> gi <cmd>Telescope lsp_implementations<CR>")
+--vim.cmd("nnoremap <silent> gs <cmd>Telescope lsp_document_symbols<CR>")
+--vim.cmd("nnoremap <silent> gS <cmd>Telescope lsp_workspace_symbols<CR>")
 
 -- Explorer
 map('n', '<Leader>m', ':NvimTreeToggle<CR>')
