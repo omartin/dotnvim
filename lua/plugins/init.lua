@@ -41,6 +41,9 @@ vim.g['g:coc_global_extensions'] = {
   'coc-rls',
   'coc-lua'
 }
+-- Language
+paq ('peitalin/vim-jsx-typescript')
+paq ('leafgarland/typescript-vim')
 
 -- Plugins configuration
 require('plugins/base16')
