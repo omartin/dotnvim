@@ -9,26 +9,33 @@ paq {'christoomey/vim-tmux-navigator'} -- Navigate between tmux panes
 paq {'folke/which-key.nvim'}
 paq {'norcalli/nvim-colorizer.lua'}
 paq {'kyazdani42/nvim-web-devicons'}
+paq {'sunjon/shade.nvim'}
+
 -- Treesitter
 paq {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+
 -- Editor
 paq {'tpope/vim-fugitive'}
 paq {'tpope/vim-repeat'}
 paq {'tpope/vim-surround'}
 paq {'nvim-lua/plenary.nvim'}
 paq { 'lewis6991/gitsigns.nvim'}
+
 -- Status line
 paq {'daviesjamie/vim-base16-lightline'}
 paq { 'itchyny/lightline.vim' }
+
 -- Telescope
 paq {'nvim-lua/popup.nvim'}
 paq {'nvim-telescope/telescope.nvim'}
+
 -- Explorer
 paq {'kyazdani42/nvim-tree.lua'}
 -- LSP and completion
 --paq {'neovim/nvim-lspconfig'}
 --paq {'glepnir/lspsaga.nvim'}
 --paq {'hrsh7th/nvim-compe'}
+
 -- CoC
 paq {'neoclide/coc.nvim'}
 vim.cmd('source ~/.nvim/coc.vim')
@@ -41,6 +48,7 @@ vim.g['g:coc_global_extensions'] = {
   'coc-rls',
   'coc-lua'
 }
+
 -- Language
 paq ('peitalin/vim-jsx-typescript')
 paq ('leafgarland/typescript-vim')
@@ -49,6 +57,7 @@ paq ('leafgarland/typescript-vim')
 require('plugins/base16')
 require('plugins/which-key')
 require('plugins/colorizer')
+require('plugins/shade')
 require('plugins/treesitter')
 require('plugins/gitsigns')
 require('plugins/lightline')
