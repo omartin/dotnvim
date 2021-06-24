@@ -9,7 +9,6 @@ paq {'christoomey/vim-tmux-navigator'} -- Navigate between tmux panes
 paq {'folke/which-key.nvim'}
 paq {'norcalli/nvim-colorizer.lua'}
 paq {'kyazdani42/nvim-web-devicons'}
-paq {'sunjon/shade.nvim'}
 
 -- Treesitter
 paq {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
@@ -57,7 +56,6 @@ paq ('leafgarland/typescript-vim')
 require('plugins/base16')
 require('plugins/which-key')
 require('plugins/colorizer')
-require('plugins/shade')
 require('plugins/treesitter')
 require('plugins/gitsigns')
 require('plugins/lightline')
