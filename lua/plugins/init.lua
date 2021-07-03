@@ -18,7 +18,7 @@ paq {'tpope/vim-fugitive'}
 paq {'tpope/vim-repeat'}
 paq {'tpope/vim-surround'}
 paq {'nvim-lua/plenary.nvim'}
-paq { 'lewis6991/gitsigns.nvim'}
+paq { 'lewis6991/gitSigns.nvim'}
 
 -- Status line
 paq {'daviesjamie/vim-base16-lightline'}
@@ -30,6 +30,7 @@ paq {'nvim-telescope/telescope.nvim'}
 
 -- Explorer
 paq {'kyazdani42/nvim-tree.lua'}
+
 -- LSP and completion
 --paq {'neovim/nvim-lspconfig'}
 --paq {'glepnir/lspsaga.nvim'}
@@ -61,6 +62,7 @@ require('plugins/gitsigns')
 require('plugins/lightline')
 require('plugins/nvim-tree')
 require('plugins/telescope')
+
 --require('plugins/lspconfig')
 --require('plugins/lspsaga')
 --require('plugins/compe')
