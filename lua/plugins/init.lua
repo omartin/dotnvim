@@ -36,6 +36,7 @@ paq {'kyazdani42/nvim-tree.lua'}
 paq {'neovim/nvim-lspconfig'}
 paq {'kabouzeid/nvim-lspinstall'}
 paq {'glepnir/lspsaga.nvim'}
+paq {'folke/lsp-colors.nvim'}
 paq {'hrsh7th/nvim-compe'}
 
 -- CoC
@@ -69,4 +70,5 @@ require('plugins/telescope')
 require('plugins/lspconfig')
 require('plugins/lspinstall')
 require('plugins/lspsaga')
+require('plugins/lsp-colors')
 require('plugins/compe')
