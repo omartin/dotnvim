@@ -12,6 +12,7 @@ paq {'kyazdani42/nvim-web-devicons'}
 
 -- Treesitter
 paq {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+paq {'nvim-treesitter/nvim-treesitter-textobjects'}
 
 -- Editor
 paq {'tpope/vim-fugitive'}
@@ -32,22 +33,23 @@ paq {'nvim-telescope/telescope.nvim'}
 paq {'kyazdani42/nvim-tree.lua'}
 
 -- LSP and completion
---paq {'neovim/nvim-lspconfig'}
---paq {'glepnir/lspsaga.nvim'}
---paq {'hrsh7th/nvim-compe'}
+paq {'neovim/nvim-lspconfig'}
+paq {'kabouzeid/nvim-lspinstall'}
+paq {'glepnir/lspsaga.nvim'}
+paq {'hrsh7th/nvim-compe'}
 
 -- CoC
-paq {'neoclide/coc.nvim'}
-vim.cmd('source ~/.nvim/coc.vim')
-vim.g['g:coc_global_extensions'] = {
-  'coc-snippets',
-  'coc-tsserver',
-  'coc-eslint',
-  'coc-json',
-  'coc-go',
-  'coc-rls',
-  'coc-lua'
-}
+--paq {'neoclide/coc.nvim'}
+--vim.cmd('source ~/.nvim/coc.vim')
+--vim.g['g:coc_global_extensions'] = {
+--  'coc-snippets',
+--  'coc-tsserver',
+--  'coc-eslint',
+--  'coc-json',
+--  'coc-go',
+--  'coc-rls',
+--  'coc-lua'
+--}
 
 -- Language
 paq ('peitalin/vim-jsx-typescript')
@@ -58,11 +60,13 @@ require('plugins/base16')
 require('plugins/which-key')
 require('plugins/colorizer')
 require('plugins/treesitter')
+require('plugins/treesitter-textobjects')
 require('plugins/gitsigns')
 require('plugins/lightline')
 require('plugins/nvim-tree')
 require('plugins/telescope')
 
---require('plugins/lspconfig')
---require('plugins/lspsaga')
---require('plugins/compe')
+require('plugins/lspconfig')
+require('plugins/lspinstall')
+require('plugins/lspsaga')
+require('plugins/compe')
