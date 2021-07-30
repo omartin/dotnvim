@@ -28,6 +28,7 @@ paq { 'itchyny/lightline.vim' }
 -- Telescope
 paq {'nvim-lua/popup.nvim'}
 paq {'nvim-telescope/telescope.nvim'}
+paq {'folke/trouble.nvim'}
 
 -- Explorer
 paq {'kyazdani42/nvim-tree.lua'}
@@ -66,6 +67,7 @@ require('plugins/gitsigns')
 require('plugins/lightline')
 require('plugins/nvim-tree')
 require('plugins/telescope')
+require('plugins/trouble')
 
 -- LSP (activate one day)
 --require('plugins/lspconfig')
