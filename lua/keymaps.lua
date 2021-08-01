@@ -53,3 +53,10 @@ map('n', '<Leader>m', ':NvimTreeToggle<CR>')
 map('n', '<Leader>r', ':NvimTreeRefresh<CR>')
 map('n', '<Leader>n', ':NvimTreeFindFile<CR>')
 
+-- Trouble
+map('n', '<Leader>xx', ':Trouble<CR>')
+map('n', '<Leader>xw', ':Trouble lsp_workspace_diagnostics<CR>')
+map('n', '<Leader>xd', ':Trouble lsp_document_diagnostics<CR>')
+map('n', '<Leader>xl', ':Trouble loclist<CR>')
+map('n', '<Leader>xq', ':Trouble quickfix<CR>')
+map('n', '<Leader>gR', ':Trouble lsp_references<CR>')
