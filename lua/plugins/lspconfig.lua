@@ -23,4 +23,14 @@ vim.fn.sign_define('LspDiagnosticsSignHint', {
   text = '',
 })
 
-require('lspconfig').tsserver.setup{}
+lsp.tsserver.setup {}
+
+lsp.sumneko_lua.setup {
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = { "vim" }
+      }
+    }
+  }
+}
