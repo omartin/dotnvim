@@ -48,19 +48,6 @@ paq {'glepnir/lspsaga.nvim'}
 paq {'folke/lsp-colors.nvim'}
 paq {'hrsh7th/nvim-compe'}
 
--- CoC
---paq {'neoclide/coc.nvim'}
---vim.cmd('source ~/.nvim/coc.vim')
---vim.g['g:coc_global_extensions'] = {
---  'coc-snippets',
---  'coc-tsserver',
---  'coc-eslint',
---  'coc-json',
---  'coc-go',
---  'coc-rls',
---  'coc-lua'
---}
-
 -- Language
 paq ('peitalin/vim-jsx-typescript')
 paq ('leafgarland/typescript-vim')
@@ -75,10 +62,7 @@ require('plugins/lightline')
 require('plugins/nvim-tree')
 require('plugins/telescope')
 require('plugins/trouble')
-
--- LSP (activate one day)
 require('plugins/lspconfig')
 require('plugins/lspinstall')
-require('plugins/lspsaga')
 require('plugins/lsp-colors')
 require('plugins/compe')
