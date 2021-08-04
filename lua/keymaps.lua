@@ -30,6 +30,20 @@ map('n', '<Leader>t', ':tabnew<CR>') -- New tab
 map('n', '<Tab>', ':tabnext<CR>:file<CR>') -- Next tab
 map('n', '<S-Tab>', ':tabprevious<CR>:file<CR>') -- Previous tab
 
+-- Lspsaga
+map('n', '<Leader>rn', ':Lspsaga rename<CR>')
+
+vim.cmd("nnoremap <silent> ca :Lspsaga code_action<CR>")
+vim.cmd("nnoremap <silent> K :Lspsaga hover_doc<CR>")
+-- vim.cmd('nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>')
+vim.cmd("nnoremap <silent> <C-p> :Lspsaga diagnostic_jump_prev<CR>")
+vim.cmd("nnoremap <silent> <C-n> :Lspsaga diagnostic_jump_next<CR>")
+-- scroll down hover doc or scroll in definition preview
+vim.cmd("nnoremap <silent> <C-f> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>")
+-- scroll up hover doc
+vim.cmd("nnoremap <silent> <C-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>")
+vim.cmd('command! -nargs=0 LspVirtualTextToggle lua require("lsp/virtual_text").toggle()')
+
 -- Telescope
 map('n', '<Leader>ff', ':Telescope find_files<CR>')
 map('n', '<Leader>fg', ':Telescope live_grep<CR>')
@@ -53,3 +67,10 @@ map('n', '<Leader>m', ':NvimTreeToggle<CR>')
 map('n', '<Leader>r', ':NvimTreeRefresh<CR>')
 map('n', '<Leader>n', ':NvimTreeFindFile<CR>')
 
+-- Trouble
+map('n', '<Leader>xx', ':Trouble<CR>')
+map('n', '<Leader>xw', ':Trouble lsp_workspace_diagnostics<CR>')
+map('n', '<Leader>xd', ':Trouble lsp_document_diagnostics<CR>')
+map('n', '<Leader>xl', ':Trouble loclist<CR>')
+map('n', '<Leader>xq', ':Trouble quickfix<CR>')
+map('n', '<Leader>gR', ':Trouble lsp_references<CR>')
