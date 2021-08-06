@@ -32,17 +32,12 @@ map('n', '<S-Tab>', ':tabprevious<CR>:file<CR>') -- Previous tab
 
 -- Lspsaga
 map('n', '<Leader>rn', ':Lspsaga rename<CR>')
+map('n', '<Leader>ca', ':Lspsaga code_action<CR>')
+map('n', 'K', ':Lspsaga hover_doc<CR>')
+map('n', '<C-p>', ':Lspsaga diagnostic_jump_prev<CR>')
+map('n', '<C-n>', ':Lspsaga diagnostic_jump_next<CR>')
+map('n', '<Leader>ft', ':Lspsaga open_floaterm<CR>')
 
-vim.cmd("nnoremap <silent> ca :Lspsaga code_action<CR>")
-vim.cmd("nnoremap <silent> K :Lspsaga hover_doc<CR>")
--- vim.cmd('nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>')
-vim.cmd("nnoremap <silent> <C-p> :Lspsaga diagnostic_jump_prev<CR>")
-vim.cmd("nnoremap <silent> <C-n> :Lspsaga diagnostic_jump_next<CR>")
--- scroll down hover doc or scroll in definition preview
-vim.cmd("nnoremap <silent> <C-f> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>")
--- scroll up hover doc
-vim.cmd("nnoremap <silent> <C-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>")
-vim.cmd('command! -nargs=0 LspVirtualTextToggle lua require("lsp/virtual_text").toggle()')
 
 -- Telescope
 map('n', '<Leader>ff', ':Telescope find_files<CR>')
@@ -56,11 +51,11 @@ map('n', '<Leader>fs', ':Telescope git_status<CR>')
 map('n', '<Leader>fc', ':Telescope git_commits<CR>')
 map('n', '<Leader>fr', ':Telescope git_branches<CR>')
 
-vim.cmd("nnoremap <silent> gr <cmd>Telescope lsp_references<CR>")
-vim.cmd("nnoremap <silent> gd <cmd>Telescope lsp_definitions<CR>")
-vim.cmd("nnoremap <silent> gi <cmd>Telescope lsp_implementations<CR>")
-vim.cmd("nnoremap <silent> gs <cmd>Telescope lsp_document_symbols<CR>")
-vim.cmd("nnoremap <silent> gS <cmd>Telescope lsp_workspace_symbols<CR>")
+map('n', 'gr', ':Telescope lsp_references<CR>')
+map('n', 'gd', ':Telescope lsp_definitions<CR>')
+map('n', 'gi', ':Telescope lsp_implementations<CR>')
+map('n', 'gs', ':Telescope lsp_document_symbols<CR>')
+map('n', 'gS', ':Telescope lsp_workspace_symbols<CR>')
 
 -- Explorer
 map('n', '<Leader>m', ':NvimTreeToggle<CR>')
