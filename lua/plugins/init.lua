@@ -12,11 +12,6 @@ paq {'kyazdani42/nvim-web-devicons'}
 -- Colorschemes
 paq {'chriskempson/base16-vim'}
 paq {'tjdevries/colorbuddy.vim'}
-paq {'folke/tokyonight.nvim'}
-paq {'christianchiarulli/nvcode-color-schemes.vim'}
-paq {'kyazdani42/blue-moon'}
-paq {'savq/melange'}
-paq {'maaslalani/nordbuddy'}
 
 -- Treesitter
 paq {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
