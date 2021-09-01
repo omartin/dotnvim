@@ -16,10 +16,6 @@ map('n', '<Esc><Esc>', '<Esc>:nohlsearch<CR><Esc>') -- Hide search highlight
 -- System clipboard
 vim.cmd('map <Leader>y "*y')
 vim.cmd('map <Leader>p "*p')
---[[ TODO fix this
-map('n', '<Leader>y', '\"*y') -- Yank into system's clipboard
-map('n', '<Leader>p', '\"*p') -- Paste from system's clipboard
-]]
 
 -- Splits
 map('n', '<Leader>-', '<C-W>s') -- Split horizontal
@@ -31,13 +27,12 @@ map('n', '<Tab>', ':tabnext<CR>:file<CR>') -- Next tab
 map('n', '<S-Tab>', ':tabprevious<CR>:file<CR>') -- Previous tab
 
 -- Lspsaga
-map('n', '<Leader>rn', ':Lspsaga rename<CR>')
-map('n', '<Leader>ca', ':Lspsaga code_action<CR>')
-map('n', 'K', ':Lspsaga hover_doc<CR>')
-map('n', '<C-p>', ':Lspsaga diagnostic_jump_prev<CR>')
-map('n', '<C-n>', ':Lspsaga diagnostic_jump_next<CR>')
-map('n', '<Leader>ft', ':Lspsaga open_floaterm<CR>')
-
+--map('n', '<Leader>rn', ':Lspsaga rename<CR>')
+--map('n', '<Leader>ca', ':Lspsaga code_action<CR>')
+--map('n', 'K', ':Lspsaga hover_doc<CR>')
+--map('n', '<C-p>', ':Lspsaga diagnostic_jump_prev<CR>')
+--map('n', '<C-n>', ':Lspsaga diagnostic_jump_next<CR>')
+--map('n', '<Leader>ft', ':Lspsaga open_floaterm<CR>')
 
 -- Telescope
 map('n', '<Leader>ff', ':Telescope find_files<CR>')
@@ -63,9 +58,9 @@ map('n', '<Leader>r', ':NvimTreeRefresh<CR>')
 map('n', '<Leader>n', ':NvimTreeFindFile<CR>')
 
 -- Trouble
-map('n', '<Leader>xx', ':Trouble<CR>')
-map('n', '<Leader>xw', ':Trouble lsp_workspace_diagnostics<CR>')
-map('n', '<Leader>xd', ':Trouble lsp_document_diagnostics<CR>')
-map('n', '<Leader>xl', ':Trouble loclist<CR>')
-map('n', '<Leader>xq', ':Trouble quickfix<CR>')
-map('n', '<Leader>gR', ':Trouble lsp_references<CR>')
+--map('n', '<Leader>xx', ':Trouble<CR>')
+--map('n', '<Leader>xw', ':Trouble lsp_workspace_diagnostics<CR>')
+--map('n', '<Leader>xd', ':Trouble lsp_document_diagnostics<CR>')
+--map('n', '<Leader>xl', ':Trouble loclist<CR>')
+--map('n', '<Leader>xq', ':Trouble quickfix<CR>')
+--map('n', '<Leader>gR', ':Trouble lsp_references<CR>')

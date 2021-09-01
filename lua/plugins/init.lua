@@ -25,24 +25,34 @@ paq {'nvim-lua/plenary.nvim'}
 paq {'lewis6991/gitSigns.nvim'}
 
 -- Status line
---paq {'daviesjamie/vim-base16-lightline'}
---paq {'itchyny/lightline.vim'}
 paq {'hoob3rt/lualine.nvim'}
 
 -- Telescope
 paq {'nvim-lua/popup.nvim'}
 paq {'nvim-telescope/telescope.nvim'}
-paq {'folke/trouble.nvim'}
 
 -- Explorer
 paq {'kyazdani42/nvim-tree.lua'}
 
 -- LSP and completion
-paq {'neovim/nvim-lspconfig'}
-paq {'kabouzeid/nvim-lspinstall'}
-paq {'glepnir/lspsaga.nvim'}
-paq {'folke/lsp-colors.nvim'}
-paq {'hrsh7th/nvim-compe'}
+paq {'neoclide/coc.nvim'}
+vim.cmd('source ~/.nvim/coc.vim')
+vim.cmd('let g:coc_node_path = "~/.nvm/versions/node/v14.17.4/bin/node"')
+vim.g['g:coc_global_extensions'] = {
+  'coc-snippets',
+  'coc-tsserver',
+  'coc-eslint',
+  'coc-json',
+  'coc-go',
+  'coc-rls',
+  'coc-lua'
+}
+--paq {'neovim/nvim-lspconfig'}
+--paq {'kabouzeid/nvim-lspinstall'}
+--paq {'glepnir/lspsaga.nvim'}
+--paq {'folke/lsp-colors.nvim'}
+--paq {'hrsh7th/nvim-compe'}
+--paq {'folke/trouble.nvim'}
 
 -- Language
 paq ('peitalin/vim-jsx-typescript')
@@ -54,12 +64,12 @@ require('plugins/colorizer')
 require('plugins/treesitter')
 require('plugins/treesitter-textobjects')
 require('plugins/gitsigns')
---require('plugins/lightline')
 require('plugins/lualine')
 require('plugins/nvim-tree')
 require('plugins/telescope')
-require('plugins/trouble')
-require('plugins/lspconfig')
-require('plugins/lspinstall')
-require('plugins/lsp-colors')
-require('plugins/compe')
+
+--require('plugins/lspconfig')
+--require('plugins/lspinstall')
+--require('plugins/lsp-colors')
+--require('plugins/compe')
+--require('plugins/trouble')
