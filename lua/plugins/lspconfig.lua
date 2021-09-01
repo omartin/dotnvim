@@ -1,84 +1,108 @@
 local lspconfig = require('lspconfig')
+local lspinstall = require('lspinstall')
 
-vim.fn.sign_define('LspDiagnosticsSignError', {
-  texthl = 'LspDiagnosticsSignError',
-  numhl = 'LspDiagnosticsSignError',
-  text = '',
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.documentationFormat = { "markdown", "plaintext" }
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+capabilities.textDocument.completion.completionItem.preselectSupport = true
+capabilities.textDocument.completion.completionItem.insertReplaceSupport = true
+capabilities.textDocument.completion.completionItem.labelDetailsSupport = true
+capabilities.textDocument.completion.completionItem.deprecatedSupport = true
+capabilities.textDocument.completion.completionItem.commitCharactersSupport = true
+capabilities.textDocument.completion.completionItem.tagSupport = { valueSet = { 1 } }
+capabilities.textDocument.completion.completionItem.resolveSupport = {
+   properties = {
+      "documentation",
+      "detail",
+      "additionalTextEdits",
+   },
+}
+
+local function setup_servers()
+   lspinstall.setup()
+   local servers = lspinstall.installed_servers()
+
+   for _, lang in pairs(servers) do
+      if lang ~= "lua" then
+         lspconfig[lang].setup {
+            capabilities = capabilities,
+            flags = {
+               debounce_text_changes = 500,
+            },
+            -- root_dir = vim.loop.cwd,
+         }
+      elseif lang == "lua" then
+         lspconfig[lang].setup {
+            capabilities = capabilities,
+            flags = {
+               debounce_text_changes = 500,
+            },
+            settings = {
+               Lua = {
+                  diagnostics = {
+                     globals = { "vim" },
+                  },
+                  workspace = {
+                     library = {
+                        [vim.fn.expand "$VIMRUNTIME/lua"] = true,
+                        [vim.fn.expand "$VIMRUNTIME/lua/vim/lsp"] = true,
+                     },
+                     maxPreload = 100000,
+                     preloadFileSize = 10000,
+                  },
+                  telemetry = {
+                     enable = false,
+                  },
+               },
+            },
+         }
+      end
+   end
+end
+
+setup_servers()
+
+-- Automatically reload after `:LspInstall <server>` so we don't have to restart neovim
+lspinstall.post_install_hook = function()
+   setup_servers() -- reload installed servers
+   vim.cmd "bufdo e"
+end
+
+-- replace the default lsp diagnostic symbols
+local function lspSymbol(name, icon)
+   vim.fn.sign_define("LspDiagnosticsSign" .. name, { text = icon, numhl = "LspDiagnosticsDefaul" .. name })
+end
+
+lspSymbol("Error", "")
+lspSymbol("Information", "")
+lspSymbol("Hint", "")
+lspSymbol("Warning", "")
+
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+   virtual_text = {
+      prefix = "",
+      spacing = 0,
+   },
+   signs = true,
+   underline = true,
+   update_in_insert = false, -- update diagnostics insert mode
+})
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+   border = "single",
+})
+vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+   border = "single",
 })
 
-vim.fn.sign_define('LspDiagnosticsSignWarning', {
-  texthl = 'LspDiagnosticsSignWarning',
-  numhl = 'LspDiagnosticsSignWarning',
-  text = '',
-})
+-- suppress error messages from lang servers
+vim.notify = function(msg, log_level, _opts)
+   if msg:match "exit code" then
+      return
+   end
+   if log_level == vim.log.levels.ERROR then
+      vim.api.nvim_err_writeln(msg)
+   else
+      vim.api.nvim_echo({ { msg } }, true, {})
+   end
+end
 
-vim.fn.sign_define('LspDiagnosticsSignInformation', {
-  texthl = 'LspDiagnosticsSignInformation',
-  numhl = 'LspDiagnosticsSignInformation',
-  text = '',
-})
-
-vim.fn.sign_define('LspDiagnosticsSignHint', {
-  texthl = 'LspDiagnosticsSignHint',
-  numhl = 'LspDiagnosticsSignHint',
-  text = '',
-})
-
-
-lspconfig.sumneko_lua.setup {
-  settings = {
-    Lua = {
-      diagnostics = {
-        globals = { "vim" }
-      }
-    }
-  }
-}
-
--- https://jose-elias-alvarez.medium.com/configuring-neovims-lsp-client-for-typescript-development-5789d58ea9c
-lspconfig.tsserver.setup {
-}
-
-local filetypes = {
-  typescript = "eslint",
-  typescriptreact = "eslint",
-}
-
-local linters = {
-  eslint = {
-    sourceName = "eslint",
-    command = "eslint_d",
-    rootPatterns = {".eslintrc.js", "package.json"},
-    debounce = 100,
-    args = {"--stdin", "--stdin-filename", "%filepath", "--format", "json"},
-    parseJson = {
-      errorsRoot = "[0].messages",
-      line = "line",
-      column = "column",
-      endLine = "endLine",
-      endColumn = "endColumn",
-      message = "${message} [${ruleId}]",
-      security = "severity"
-    },
-    securities = {[2] = "warning", [1] = "warning"}
-  }
-}
-
-local formatters = {
-  prettier = {command = "prettier", args = {"--stdin-filepath", "%filepath"}}
-}
-
-local formatFiletypes = {
-  typescript = "prettier",
-  typescriptreact = "prettier"
-}
-
-lspconfig.diagnosticls.setup {
-  filetypes = vim.tbl_keys(filetypes),
-  init_options = {
-    filetypes = filetypes,
-    linters = linters,
-    formatters = formatters,
-    formatFiletypes = formatFiletypes
-  }
-}
