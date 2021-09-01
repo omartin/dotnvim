@@ -42,6 +42,7 @@ paq {'kabouzeid/nvim-lspinstall'}
 paq {'glepnir/lspsaga.nvim'}
 paq {'folke/lsp-colors.nvim'}
 paq {'hrsh7th/nvim-compe'}
+paq {'onsails/lspkind-nvim'}
 
 -- Language
 paq ('peitalin/vim-jsx-typescript')
@@ -61,3 +62,4 @@ require('plugins/trouble')
 require('plugins/lspconfig')
 require('plugins/lsp-colors')
 require('plugins/compe')
+require('plugins/lspkind')
