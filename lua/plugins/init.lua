@@ -8,6 +8,7 @@ paq {'christoomey/vim-tmux-navigator'} -- Navigate between tmux panes
 paq {'folke/which-key.nvim'}
 paq {'norcalli/nvim-colorizer.lua'}
 paq {'kyazdani42/nvim-web-devicons'}
+paq {'karb94/neoscroll.nvim'}
 
 -- Colorschemes
 paq {'chriskempson/base16-vim'}
@@ -50,6 +51,7 @@ paq ('leafgarland/typescript-vim')
 
 -- Plugins configuration
 require('plugins/which-key')
+require('plugins/neoscroll')
 require('plugins/colorizer')
 require('plugins/treesitter')
 require('plugins/treesitter-textobjects')
