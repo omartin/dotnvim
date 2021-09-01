@@ -23,10 +23,9 @@ paq {'tpope/vim-repeat'}
 paq {'tpope/vim-surround'}
 paq {'nvim-lua/plenary.nvim'}
 paq {'lewis6991/gitSigns.nvim'}
+paq {'lukas-reineke/indent-blankline.nvim'}
 
 -- Status line
---paq {'daviesjamie/vim-base16-lightline'}
---paq {'itchyny/lightline.vim'}
 paq {'hoob3rt/lualine.nvim'}
 
 -- Telescope
@@ -54,7 +53,7 @@ require('plugins/colorizer')
 require('plugins/treesitter')
 require('plugins/treesitter-textobjects')
 require('plugins/gitsigns')
---require('plugins/lightline')
+require('plugins/blankline')
 require('plugins/lualine')
 require('plugins/nvim-tree')
 require('plugins/telescope')
