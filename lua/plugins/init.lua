@@ -8,7 +8,6 @@ paq {'christoomey/vim-tmux-navigator'} -- Navigate between tmux panes
 paq {'folke/which-key.nvim'}
 paq {'norcalli/nvim-colorizer.lua'}
 paq {'kyazdani42/nvim-web-devicons'}
-paq {'karb94/neoscroll.nvim'}
 
 -- Colorschemes
 paq {'chriskempson/base16-vim'}
