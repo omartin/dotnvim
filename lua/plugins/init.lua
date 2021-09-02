@@ -50,7 +50,6 @@ paq ('leafgarland/typescript-vim')
 
 -- Plugins configuration
 require('plugins/which-key')
-require('plugins/neoscroll')
 require('plugins/colorizer')
 require('plugins/treesitter')
 require('plugins/treesitter-textobjects')
