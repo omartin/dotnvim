@@ -44,7 +44,6 @@ paq {'folke/lsp-colors.nvim'}
 paq {'hrsh7th/nvim-compe'}
 paq {'onsails/lspkind-nvim'}
 paq {'neoclide/coc.nvim'}
-vim.cmd('let g:coc_node_path = "~/.nvm/versions/node/v14.17.4/bin/node"')
 vim.g['g:coc_global_extensions'] = {
   'coc-snippets',
   'coc-tsserver',
