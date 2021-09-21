@@ -43,21 +43,11 @@ paq {'glepnir/lspsaga.nvim'}
 paq {'folke/lsp-colors.nvim'}
 paq {'hrsh7th/nvim-compe'}
 paq {'onsails/lspkind-nvim'}
-paq {'neoclide/coc.nvim'}
-vim.g['g:coc_global_extensions'] = {
-  'coc-snippets',
-  'coc-tsserver',
-  'coc-eslint',
-  'coc-json',
-  'coc-go',
-  'coc-rls',
-  'coc-lua'
-}
--- :call coc#util#install()
 
 -- Language
-paq ('peitalin/vim-jsx-typescript')
-paq ('leafgarland/typescript-vim')
+paq {'peitalin/vim-jsx-typescript'}
+paq {'leafgarland/typescript-vim'}
+paq {'folke/nvim-lsp-ts-utils'}
 
 -- Plugins configuration
 require('plugins/which-key')
