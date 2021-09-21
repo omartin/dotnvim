@@ -30,3 +30,4 @@ opt('w', 'cursorline', true)          -- Highlight the line beneath the cursor
 opt('o', 'undofile', true)            -- Enable undo
 opt('w', 'signcolumn', 'yes:1')       -- Always show the signcolumn
 opt('o', 'showmode', false)           -- Hide the mode (already shown in status line)
+opt('o', 'autoread', true)            -- Reload automatically

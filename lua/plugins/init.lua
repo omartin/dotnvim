@@ -24,6 +24,7 @@ paq {'tpope/vim-surround'}
 paq {'nvim-lua/plenary.nvim'}
 paq {'lewis6991/gitSigns.nvim'}
 paq {'lukas-reineke/indent-blankline.nvim'}
+paq {'mhartington/formatter.nvim'}
 
 -- Status line
 paq {'hoob3rt/lualine.nvim'}
@@ -56,6 +57,7 @@ require('plugins/treesitter')
 require('plugins/treesitter-textobjects')
 require('plugins/gitsigns')
 require('plugins/blankline')
+require('plugins/formatter')
 require('plugins/lualine')
 require('plugins/nvim-tree')
 require('plugins/telescope')
