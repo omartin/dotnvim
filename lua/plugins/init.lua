@@ -21,10 +21,10 @@ paq {'nvim-treesitter/nvim-treesitter-textobjects'}
 paq {'tpope/vim-fugitive'}
 paq {'tpope/vim-repeat'}
 paq {'tpope/vim-surround'}
-paq {'nvim-lua/plenary.nvim'}
 paq {'lewis6991/gitSigns.nvim'}
 paq {'lukas-reineke/indent-blankline.nvim'}
 paq {'mhartington/formatter.nvim'}
+paq {'nvim-lua/plenary.nvim'}
 
 -- Status line
 paq {'hoob3rt/lualine.nvim'}
@@ -37,18 +37,18 @@ paq {'folke/trouble.nvim'}
 -- Explorer
 paq {'kyazdani42/nvim-tree.lua'}
 
--- LSP and completion
+-- LSP, completion and diagnostics
 paq {'neovim/nvim-lspconfig'}
 paq {'kabouzeid/nvim-lspinstall'}
 paq {'glepnir/lspsaga.nvim'}
 paq {'folke/lsp-colors.nvim'}
 paq {'hrsh7th/nvim-compe'}
 paq {'onsails/lspkind-nvim'}
+paq {'creativenull/diagnosticls-configs-nvim'}
 
 -- Language
 paq {'peitalin/vim-jsx-typescript'}
 paq {'leafgarland/typescript-vim'}
-paq {'folke/nvim-lsp-ts-utils'}
 
 -- Plugins configuration
 require('plugins/which-key')
@@ -66,3 +66,4 @@ require('plugins/lspconfig')
 require('plugins/lsp-colors')
 require('plugins/compe')
 require('plugins/lspkind')
+require('plugins/diagnostics')
