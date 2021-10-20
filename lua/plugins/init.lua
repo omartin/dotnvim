@@ -25,6 +25,7 @@ paq {'lewis6991/gitSigns.nvim'}
 paq {'lukas-reineke/indent-blankline.nvim'}
 paq {'mhartington/formatter.nvim'}
 paq {'nvim-lua/plenary.nvim'}
+paq {'alvarosevilla95/luatab.nvim'}
 
 -- Status line
 paq {'hoob3rt/lualine.nvim'}
