@@ -33,10 +33,10 @@ map('n', '<S-Tab>', ':tabprevious<CR>:file<CR>') -- Previous tab
 -- Lspsaga
 map('n', '<Leader>rn', ':Lspsaga rename<CR>')
 map('n', '<Leader>ca', ':Lspsaga code_action<CR>')
-map('n', 'K', ':Lspsaga hover_doc<CR>')
+--map('n', 'K', ':Lspsaga hover_doc<CR>')
+map('n', 'K', ':lua vim.lsp.buf.hover()<CR>')
 map('n', '<C-p>', ':Lspsaga diagnostic_jump_prev<CR>')
 map('n', '<C-n>', ':Lspsaga diagnostic_jump_next<CR>')
-map('n', '<Leader>ft', ':Lspsaga open_floaterm<CR>')
 
 
 -- Telescope
