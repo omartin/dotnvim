@@ -40,7 +40,7 @@ paq {'kyazdani42/nvim-tree.lua'}
 
 -- LSP, completion and diagnostics
 paq {'neovim/nvim-lspconfig'}
-paq {'kabouzeid/nvim-lspinstall'}
+paq {'williamboman/nvim-lsp-installer'}
 paq {'glepnir/lspsaga.nvim'}
 paq {'folke/lsp-colors.nvim'}
 paq {'hrsh7th/nvim-compe'}
@@ -64,7 +64,9 @@ require('plugins/nvim-tree')
 require('plugins/telescope')
 require('plugins/trouble')
 require('plugins/lspconfig')
+require('plugins/lsp-installer')
 require('plugins/lsp-colors')
 require('plugins/compe')
 require('plugins/lspkind')
 require('plugins/diagnostics')
+require('plugins/luatab')

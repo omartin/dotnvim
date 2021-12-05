@@ -8,5 +8,3 @@ autocmd BufEnter * hi Normal guibg=#181818
 autocmd BufEnter * hi LineNr guibg=#181818
 autocmd BufEnter * hi SignColumn guibg=#181818
 ]]
-
-vim.o.tabline = '%!v:lua.require\'luatab\'.tabline()'
