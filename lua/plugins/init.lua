@@ -1,55 +1,54 @@
-vim.cmd 'packadd paq-nvim' -- load the package manager
+require "paq" {
+  "savq/paq-nvim";
 
-local paq = require('paq-nvim').paq  -- a convenient alias
-paq {'savq/paq-nvim', opt = true}    -- paq-nvim manages itself
+  -- UI
+  'christoomey/vim-tmux-navigator'; -- Navigate between tmux panes
+  'folke/which-key.nvim';
+  'norcalli/nvim-colorizer.lua';
+  'kyazdani42/nvim-web-devicons';
 
--- UI
-paq {'christoomey/vim-tmux-navigator'} -- Navigate between tmux panes
-paq {'folke/which-key.nvim'}
-paq {'norcalli/nvim-colorizer.lua'}
-paq {'kyazdani42/nvim-web-devicons'}
+  -- Colorschemes
+  'chriskempson/base16-vim';
+  'tjdevries/colorbuddy.vim';
 
--- Colorschemes
-paq {'chriskempson/base16-vim'}
-paq {'tjdevries/colorbuddy.vim'}
+  -- Treesitter
+  {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'};
+  'nvim-treesitter/nvim-treesitter-textobjects';
 
--- Treesitter
-paq {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-paq {'nvim-treesitter/nvim-treesitter-textobjects'}
+  -- Editor
+  'tpope/vim-fugitive';
+  'tpope/vim-repeat';
+  'tpope/vim-surround';
+  'lewis6991/gitSigns.nvim';
+  'lukas-reineke/indent-blankline.nvim';
+  'mhartington/formatter.nvim';
+  'nvim-lua/plenary.nvim';
+  'alvarosevilla95/luatab.nvim';
 
--- Editor
-paq {'tpope/vim-fugitive'}
-paq {'tpope/vim-repeat'}
-paq {'tpope/vim-surround'}
-paq {'lewis6991/gitSigns.nvim'}
-paq {'lukas-reineke/indent-blankline.nvim'}
-paq {'mhartington/formatter.nvim'}
-paq {'nvim-lua/plenary.nvim'}
-paq {'alvarosevilla95/luatab.nvim'}
+  -- Status line
+  'hoob3rt/lualine.nvim';
 
--- Status line
-paq {'hoob3rt/lualine.nvim'}
+  -- Telescope
+  'nvim-lua/popup.nvim';
+  'nvim-telescope/telescope.nvim';
+  'folke/trouble.nvim';
 
--- Telescope
-paq {'nvim-lua/popup.nvim'}
-paq {'nvim-telescope/telescope.nvim'}
-paq {'folke/trouble.nvim'}
+  -- Explorer
+  'kyazdani42/nvim-tree.lua';
 
--- Explorer
-paq {'kyazdani42/nvim-tree.lua'}
+  -- LSP, completion and diagnostics
+  'neovim/nvim-lspconfig';
+  'williamboman/nvim-lsp-installer';
+  'glepnir/lspsaga.nvim';
+  'folke/lsp-colors.nvim';
+  'hrsh7th/nvim-compe';
+  'onsails/lspkind-nvim';
+  'creativenull/diagnosticls-configs-nvim';
 
--- LSP, completion and diagnostics
-paq {'neovim/nvim-lspconfig'}
-paq {'williamboman/nvim-lsp-installer'}
-paq {'glepnir/lspsaga.nvim'}
-paq {'folke/lsp-colors.nvim'}
-paq {'hrsh7th/nvim-compe'}
-paq {'onsails/lspkind-nvim'}
-paq {'creativenull/diagnosticls-configs-nvim'}
-
--- Language
-paq {'peitalin/vim-jsx-typescript'}
-paq {'leafgarland/typescript-vim'}
+  -- Language
+  'peitalin/vim-jsx-typescript';
+  'leafgarland/typescript-vim';
+}
 
 -- Plugins configuration
 require('plugins/which-key')
