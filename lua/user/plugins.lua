@@ -56,10 +56,14 @@ return packer.startup(function(use)
   use "folke/which-key.nvim"
   use "norcalli/nvim-colorizer.lua"
   use "mhartington/formatter.nvim"
+  use "tpope/vim-fugitive"
+  use "tpope/vim-surround"
+  use "christoomey/vim-tmux-navigator"
 
   -- Colorschemes
   use "chriskempson/base16-vim" -- A bunch of color schemes based on base 16
   use "LunarVim/Colorschemes" -- LunarVim specific color schemes
+  use "rafi/awesome-vim-colorschemes"
 
   -- Completion
   use "hrsh7th/nvim-cmp" -- The completion plugin

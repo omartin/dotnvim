@@ -43,11 +43,6 @@ local branch = {
 	icon = "",
 }
 
-local location = {
-	"location",
-	padding = 0,
-}
-
 local spaces = function()
 	return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
 end
@@ -55,7 +50,7 @@ end
 lualine.setup({
 	options = {
 		icons_enabled = true,
-		theme = "nord",
+		theme = "auto",
     section_separators = { left = '', right = ''},
     component_separators = { left = '', right = ''},
 		disabled_filetypes = { "dashboard", "NvimTree", "Outline" },
