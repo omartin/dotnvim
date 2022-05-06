@@ -42,29 +42,48 @@ packer.init {
 return packer.startup(function(use)
 
   use "wbthomason/packer.nvim" -- Have packer manage itself
-  
-  -- Colorschemes
+  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
+  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+  use "tpope/vim-fugitive"
+  use "tpope/vim-surround"
+
+  -- colorscheme
   use "chriskempson/base16-vim" -- A bunch of color schemes based on base 16
   use "LunarVim/Colorschemes" -- LunarVim specific color schemes
   use "rafi/awesome-vim-colorschemes"
+  
+  -- which-key
+  use "folke/which-key.nvim"
 
-  --use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-  --use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
-  --use "kyazdani42/nvim-web-devicons"
-  --use "kyazdani42/nvim-tree.lua"
+  -- nvim-tree
+  use {
+    "kyazdani42/nvim-tree.lua",
+    requires = {
+      "kyazdani42/nvim-web-devicons", -- optional, for file icon
+    }
+  }
+
+  -- telescope
+  use "nvim-telescope/telescope.nvim"
+  use "folke/trouble.nvim"
+  
+  -- git
+  use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } }
+
+  -- lualine
+  use "nvim-lualine/lualine.nvim"
+
+  -- indentline
+  use "lukas-reineke/indent-blankline.nvim"
+
+
   --use "akinsho/bufferline.nvim"
   --use "moll/vim-bbye"
-  --use "nvim-lualine/lualine.nvim"
   --use "lewis6991/impatient.nvim"
-  --use "lukas-reineke/indent-blankline.nvim"
   --use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
-  --use "folke/which-key.nvim"
   --use "norcalli/nvim-colorizer.lua"
   --use "mhartington/formatter.nvim"
-  --use "tpope/vim-fugitive"
-  --use "tpope/vim-surround"
   --use "christoomey/vim-tmux-navigator"
-  --use "folke/trouble.nvim"
 
   -- Completion
   --use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -84,14 +103,9 @@ return packer.startup(function(use)
   --use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   --use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
-  -- Telescope
-  --use "nvim-telescope/telescope.nvim"
-
   -- Treesitter
   --use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
 
-  -- Git
-  --use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
