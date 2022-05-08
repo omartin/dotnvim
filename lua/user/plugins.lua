@@ -46,6 +46,7 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "tpope/vim-fugitive"
   use "tpope/vim-surround"
+  use "christoomey/vim-tmux-navigator"
 
   -- colorscheme
   use "chriskempson/base16-vim" -- A bunch of color schemes based on base 16
@@ -76,14 +77,25 @@ return packer.startup(function(use)
   -- indentline
   use "lukas-reineke/indent-blankline.nvim"
 
+  -- colorizer
+  use "norcalli/nvim-colorizer.lua"
+
+  -- formatter
+  use "mhartington/formatter.nvim"
+
+  -- treesitter
+  use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
+
+  -- lsp
+  use "neovim/nvim-lspconfig" -- enable LSP
+  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
+  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
   --use "akinsho/bufferline.nvim"
   --use "moll/vim-bbye"
   --use "lewis6991/impatient.nvim"
   --use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
-  --use "norcalli/nvim-colorizer.lua"
-  --use "mhartington/formatter.nvim"
-  --use "christoomey/vim-tmux-navigator"
 
   -- Completion
   --use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -97,14 +109,7 @@ return packer.startup(function(use)
   --use "L3MON4D3/LuaSnip" --snippet engine
   --use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
-  -- LSP
-  --use "neovim/nvim-lspconfig" -- enable LSP
-  --use "williamboman/nvim-lsp-installer" -- simple to use language server installer
-  --use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
-  --use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
-  -- Treesitter
-  --use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
 
 
   -- Automatically set up your configuration after cloning packer.nvim
