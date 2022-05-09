@@ -93,23 +93,7 @@ return packer.startup(function(use)
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-nvim-lsp"
-
-  --use "akinsho/bufferline.nvim"
-  --use "moll/vim-bbye"
-  --use "lewis6991/impatient.nvim"
-  --use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
-
-  -- Completion
-  --use "hrsh7th/cmp-buffer" -- buffer completions
-  --use "hrsh7th/cmp-path" -- path completions
-  --use "hrsh7th/cmp-cmdline" -- cmdline completions
-  --use "saadparwaiz1/cmp_luasnip" -- snippet completions
-
-  -- Snippets
-  --use "L3MON4D3/LuaSnip" --snippet engine
-  --use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
-
-
+  use "hrsh7th/cmp-buffer" -- buffer completions
 
 
   -- Automatically set up your configuration after cloning packer.nvim

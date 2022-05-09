@@ -94,6 +94,7 @@ local mappings = {
     "Find files",
   },
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
+  ["t"] = { "<cmd>tabnew<CR>", "New Tab" },
   ["="] = { "<cmd>:Format<CR>", "Format" },
 
   p = {

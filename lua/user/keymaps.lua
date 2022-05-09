@@ -39,9 +39,11 @@ keymap("n", "<S-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<S-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<Leader><Leader>", "<c-^>", opts)
+
+-- Tabs
+keymap("n", "<Tab>", ":tabnext<CR>", opts)
+keymap("n", "<S-Tab>", ":tabprevious<CR>", opts)
 
 -- VISUAL --
 -- Stay in indent mode
