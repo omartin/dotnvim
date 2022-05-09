@@ -1,5 +1,6 @@
 local status_ok, which_key = pcall(require, "which-key")
 if not status_ok then
+  print('whichkey unavailable')
   return
 end
 
@@ -35,7 +36,7 @@ local setup = {
   },
   icons = {
     breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
-    separator = "➜", -- symbol used between a key and it's label
+    separator = "→", -- symbol used between a key and it's label
     group = "+", -- symbol prepended to a group
   },
   popup_mappings = {
@@ -86,7 +87,7 @@ local mappings = {
   ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
   ["w"] = { "<cmd>w!<CR>", "Save" },
   ["Q"] = { "<cmd>q!<CR>", "Quit" },
-  ["c"] = { "<cmd>Bdelete<CR>", "Close Buffer" },
+  ["q"] = { "<cmd>q<CR>", "Close window" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   ["f"] = {
     "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
