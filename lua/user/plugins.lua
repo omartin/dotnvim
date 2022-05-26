@@ -94,6 +94,8 @@ return packer.startup(function(use)
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-buffer" -- buffer completions
+  use "L3MON4D3/LuaSnip"
+  use "saadparwaiz1/cmp_luasnip" -- snippet completions
 
   -- tab
   use "alvarosevilla95/luatab.nvim"
