@@ -52,7 +52,8 @@ return packer.startup(function(use)
   use "chriskempson/base16-vim" -- A bunch of color schemes based on base 16
   use "LunarVim/Colorschemes" -- LunarVim specific color schemes
   use "rafi/awesome-vim-colorschemes"
-  
+  use "luisiacc/gruvbox-baby"  
+
   -- which-key
   use "folke/which-key.nvim"
 
