@@ -18,6 +18,10 @@ autocmd BufEnter * hi TabLineFill guibg=#181818
 
 autocmd BufEnter * hi Pmenu guibg=#181818
 autocmd BufEnter * hi FloatBorder guibg=#181818
+
+autocmd BufEnter * hi VertSplit guifg=#242424 guibg=#242424
+autocmd BufEnter * hi NvimTreeNormal guibg=#242424
+
 ]]
 
 --[[
