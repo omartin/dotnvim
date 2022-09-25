@@ -1,4 +1,4 @@
-local colorscheme = "nord" -- base16-default-dark nord tomorrow, iceberg, hybrid, sierra
+local colorscheme = "ferrum" -- ferrum alduin base16-atelier-savanna base16-default-dark nord tomorrow, iceberg, hybrid, sierra
 -- aurora.vim darkplus.vim onedarker.vim spacedark.vim system76.vim tomorrow.vim gruvbox-baby
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
@@ -18,6 +18,12 @@ autocmd BufEnter * hi TabLineFill guibg=#181818
 
 autocmd BufEnter * hi Pmenu guibg=#181818
 autocmd BufEnter * hi FloatBorder guibg=#181818
+
+autocmd BufEnter * hi VertSplit guifg=#242424 guibg=#242424
+autocmd BufEnter * hi NvimTreeNormal guibg=#242424
+
+autocmd BufEnter * hi WhichKeyFloat guibg=#181818
+
 ]]
 
 --[[

@@ -40,6 +40,17 @@ nvim_tree.setup {
           symlink = "",
         }
       }
-    }
-  }
+    },
+    root_folder_modifier = ":t",
+  },
+  diagnostics = {
+    enable = true,
+    show_on_dirs = false,
+    icons = {
+      hint = "",
+      info = "",
+      warning = "",
+      error = "",
+    },
+  },
 }

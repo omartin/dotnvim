@@ -49,7 +49,7 @@ return packer.startup(function(use)
   use "christoomey/vim-tmux-navigator"
 
   -- colorscheme
-  use "chriskempson/base16-vim" -- A bunch of color schemes based on base 16
+  use "RRethy/nvim-base16" -- A bunch of color schemes based on base 16
   use "LunarVim/Colorschemes" -- LunarVim specific color schemes
   use "rafi/awesome-vim-colorschemes"
   use "luisiacc/gruvbox-baby"  
@@ -90,6 +90,7 @@ return packer.startup(function(use)
   -- lsp
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  --use "williamboman/mason" -- SEE LATER, replaces the above ^
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
   use "hrsh7th/nvim-cmp" -- The completion plugin
