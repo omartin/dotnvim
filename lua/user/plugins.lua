@@ -49,7 +49,7 @@ return packer.startup(function(use)
   use "christoomey/vim-tmux-navigator"
 
   -- colorscheme
-  use "chriskempson/base16-vim" -- A bunch of color schemes based on base 16
+  use "RRethy/nvim-base16" -- A bunch of color schemes based on base 16
   use "LunarVim/Colorschemes" -- LunarVim specific color schemes
   use "rafi/awesome-vim-colorschemes"
   use "luisiacc/gruvbox-baby"  
