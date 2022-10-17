@@ -4,6 +4,7 @@ if not status_ok then
 	return
 end
 
+
 local hide_in_width = function()
 	return vim.fn.winwidth(0) > 80
 end
@@ -18,23 +19,9 @@ local diagnostics = {
 	always_visible = true,
 }
 
-local diff = {
-	"diff",
-	colored = false,
-	symbols = { added = " ", modified = " ", removed = " " }, -- changes diff symbols
-  cond = hide_in_width
-}
-
-local mode = {
-	"mode",
-	fmt = function(str)
-		return "-- " .. str .. " --"
-	end,
-}
-
 local filetype = {
 	"filetype",
-	icons_enabled = false,
+	icons_enabled = true,
 	icon = nil,
 }
 
@@ -43,10 +30,6 @@ local branch = {
 	icons_enabled = true,
 	icon = "",
 }
-
-local spaces = function()
-	return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
-end
 
 local theme = function()
   local colors = {
@@ -104,19 +87,17 @@ lualine.setup({
 		always_divide_middle = true,
 	},
 	sections = {
-		lualine_a = { branch, diagnostics },
-		lualine_b = { mode },
-		lualine_c = {},
-		lualine_x = { diff, spaces, "encoding", filetype },
+		lualine_a = { "mode" },
+		lualine_b = { branch, diagnostics },
+		lualine_c = { { "filename", path = 1 } },
+		lualine_x = {},
+		lualine_y = { "progress" },
 	},
 	inactive_sections = {
 		lualine_a = {},
 		lualine_b = {},
-		lualine_c = { "filename" },
-		lualine_y = {},
 		lualine_z = {},
 	},
 	tabline = {},
 	extensions = {},
 })
-

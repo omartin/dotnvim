@@ -5,6 +5,7 @@ local status_ok, indent_blankline = pcall(require, "indent_blankline")
  end
 
 indent_blankline.setup {
-    char = "|",
-    buftype_exclude = {"terminal"}
+  show_current_context = true,
+  show_current_context_start = false,
+  show_end_of_line = true,
 }
